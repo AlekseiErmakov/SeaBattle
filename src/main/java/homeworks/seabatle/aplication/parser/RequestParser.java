@@ -1,5 +1,6 @@
 package homeworks.seabatle.aplication.parser;
 
+
 import homeworks.seabatle.bean.request.DoublePointRequest;
 import homeworks.seabatle.bean.request.SinglePointRequest;
 import homeworks.seabatle.exception.parser.IncorrectInputParseExeption;
@@ -12,8 +13,8 @@ public class RequestParser {
 
     public SinglePointRequest getOneCoord(String request){
 
-        if (request.length() == 2){
-            String xStr = request.substring(1,2);
+        if (1 < request.length() && request.length() <= 3){
+            String xStr = request.replaceAll("[A-Z]","");
             String yStr = request.substring(0,1);
             int x = chekInt(xStr)-1;
             int y;
@@ -21,17 +22,29 @@ public class RequestParser {
                 y = strCoords.indexOf(yStr);
                 return new SinglePointRequest(x,y);
             }
-                throw new IncorrectInputParseExeption(request);
+                throw new IncorrectInputParseExeption(yStr + " is not a coord");
         }else {
-            throw new IncorrectInputParseExeption(request);
+            throw new IncorrectInputParseExeption(request + " are not valid coords ");
         }
     }
     public DoublePointRequest getTwoCoords(String request){
-        if (request.length() == 5){
-            String xOneStr = request.substring(1,2);
-            String yOneStr = request.substring(0,1);
-            String xTwoStr = request.substring(4);
-            String yTwoStr = request.substring(3,4);
+        if ( 4 < request.length() && request.length() <= 7){
+            String[] withoutLetters = request.replaceAll("[A-Z]","").split("\\s+");
+            String[] withoutNums = request.replaceAll("[0-9]","").split("\\s+");
+            String xOneStr;
+            String xTwoStr;
+            String yOneStr;
+            String yTwoStr;
+            try {
+                xOneStr = withoutLetters[0];
+                xTwoStr = withoutLetters[1];
+
+                yOneStr = withoutNums[0];
+                yTwoStr = withoutNums[1];
+            }catch (ArrayIndexOutOfBoundsException e){
+                throw new IncorrectInputParseExeption(request + " is not a coords");
+            }
+
             int x1 = chekInt(xOneStr) - 1;
             int x2 = chekInt(xTwoStr) - 1;
             int y1;
@@ -42,17 +55,17 @@ public class RequestParser {
                 y2 = strCoords.indexOf(yTwoStr);
                 return new DoublePointRequest(x1,y1,x2,y2);
             } else {
-                throw new IncorrectInputParseExeption(request);
+                throw new IncorrectInputParseExeption(request + " is not a ccord");
             }
         }else {
-            throw new IncorrectInputParseExeption(request);
+            throw new IncorrectInputParseExeption(request + " are not valid coords.");
         }
     }
     private int chekInt(String request){
         try{
             return Integer.parseInt(request);
         } catch (NumberFormatException ex){
-            throw new IncorrectInputParseExeption(request);
+            throw new IncorrectInputParseExeption(request + " is not Integer");
         }
     }
 }
