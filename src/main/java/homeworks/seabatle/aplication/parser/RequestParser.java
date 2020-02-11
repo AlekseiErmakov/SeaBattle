@@ -16,10 +16,10 @@ public class RequestParser {
         if (1 < request.length() && request.length() <= 3){
             String xStr = request.replaceAll("[A-Z]","");
             String yStr = request.substring(0,1);
-            int x = chekInt(xStr)-1;
-            int y;
-            if (strCoords.contains(yStr) && 0 <= x && x <= 9){
-                y = strCoords.indexOf(yStr);
+            int x;
+            int y = chekInt(xStr)-1;
+            if (strCoords.contains(yStr) && 0 <= y && y <= 9){
+                x = strCoords.indexOf(yStr);
                 return new SinglePointRequest(x,y);
             }
                 throw new IncorrectInputParseExeption(yStr + " is not a coord");
@@ -36,11 +36,11 @@ public class RequestParser {
             String yOneStr;
             String yTwoStr;
             try {
-                xOneStr = withoutLetters[0];
-                xTwoStr = withoutLetters[1];
+                xOneStr = withoutNums[0];
+                xTwoStr = withoutNums[1];
 
-                yOneStr = withoutNums[0];
-                yTwoStr = withoutNums[1];
+                yOneStr = withoutLetters[0];
+                yTwoStr = withoutLetters[1];
             }catch (ArrayIndexOutOfBoundsException e){
                 throw new IncorrectInputParseExeption(request + " is not a coords");
             }

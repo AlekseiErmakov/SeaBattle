@@ -20,13 +20,14 @@ public class PlayerShipsRepository implements ShipsRepository{
                 return ship;
             }
         }
-        throw new ShipNotFoundExeption(x + " " + y);
+        throw new ShipNotFoundExeption("something goes wrong");
     }
     @Override
     public String addShip(Ship ship) {
         for (Ship inListShip : ships){
            if (inListShip.isShipZone(ship.getShipCoords())){
-               throw new ShipCreationRequestExeption(" there is another ship in this coordinates");
+               throw new ShipCreationRequestExeption("You can't create ship here,there" +
+                       " is another ship in this coordinates");
            }
         }
         ships.add(ship);
@@ -35,12 +36,16 @@ public class PlayerShipsRepository implements ShipsRepository{
 
     @Override
     public void updateShip(Ship ship) {
+        int ind = -1;
         for (Ship inListShip : ships){
             if (inListShip.getId() == ship.getId()){
-                int ind = ships.indexOf(inListShip);
-                ships.set(ind,ship);
+                ind = ships.indexOf(inListShip);
             }
         }
+        if (ind != -1){
+            ships.set(ind,ship);
+        }
+
     }
     @Override
     public void clear() {

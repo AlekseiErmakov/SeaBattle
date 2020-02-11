@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01a66ce3-84b7-489b-b958-931582558baf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/ships/OneDeckShipTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/ships/ThreeDeckShipTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/ships/TwoDeckShipTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/ships/repository/PlayerShipsRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/field/FieldTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/request/DoublePointRequestTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/ships/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/ships/Ship.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/field/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/field/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/ships/Ships.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/ships/repository/PlayerShipsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/ships/repository/PlayerShipsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/ships/FourDeckShipTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/ships/FourDeckShipTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/bean/ships/Ship.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/bean/ships/Ship.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/homeworks/seabatle/bean/ships/FourDeckShipTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/homeworks/seabatle/bean/ships/FourDeckShipTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/ship/ShipCreationRequestExeption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/ship/ShipCreationRequestExeption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/ships/repository/PlayerShipsRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/ships/repository/PlayerShipsRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/bean/field/Field.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/bean/field/Field.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/bean/ships/Ships.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/bean/ships/repository/PlayerShipsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/bean/ships/repository/PlayerShipsRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/exception/ship/ShipCreationRequestExeption.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/exception/ship/ShipCreationRequestExeption.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/homeworks/seabatle/bean/ships/repository/PlayerShipsRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/homeworks/seabatle/bean/ships/repository/PlayerShipsRepositoryTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,7 +25,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="15" />
+    <option name="myElementSize" value="129" />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="testRunner" value="GRADLE" />
@@ -31,102 +34,64 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/ships/OneDeckShip.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="51" lean-forward="true" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#234#235#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/ships/Ship.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/ships/OneDeckShipTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6">
-              <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
-              <folding>
-                <element signature="e#1642#1643#0" expanded="true" />
-                <element signature="e#1672#1673#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/ships/ThreeDeckShip.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/ships/ThreeDeckShipTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="70" column="5" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="70" selection-end-column="5" />
-              <folding>
-                <element signature="e#1943#1944#0" expanded="true" />
-                <element signature="e#1973#1974#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/ships/TwoDeckShip.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="8" column="50" lean-forward="true" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
-              <folding>
-                <element signature="e#212#213#0" expanded="true" />
-                <element signature="e#242#243#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/ships/TwoDeckShipTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-199">
-              <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-              <folding>
-                <element signature="e#1652#1653#0" expanded="true" />
-                <element signature="e#1702#1703#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/ships/repository/PlayerShipsRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="737">
-              <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
+            <state relative-caret-position="255">
+              <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/ships/repository/PlayerShipsRepositoryTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-612">
+              <caret line="76" column="32" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2679#2680#0" expanded="true" />
+                <element signature="e#2718#2719#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/request/DoublePointRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+              <folding>
+                <element signature="e#410#411#0" expanded="true" />
+                <element signature="e#498#499#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/request/DoublePointRequestTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/ships/repository/PlayerShipsRepositoryTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/field/Field.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+            <state relative-caret-position="289">
+              <caret line="39" column="19" lean-forward="true" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/field/FieldTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="74" column="37" selection-start-line="74" selection-start-column="37" selection-end-line="74" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -135,10 +100,32 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/ships/FourDeckShipTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/field/StrikeResult.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="73" column="44" lean-forward="true" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
+            <state relative-caret-position="51">
+              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/aplication/SeaBattleAp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/ship/ShipCreationRequestExeption.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+              <folding>
+                <element signature="e#240#241#0" expanded="true" />
+                <element signature="e#273#274#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -175,8 +162,12 @@
         <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/ships/Ship.java" />
         <option value="$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/ships/ThreeDeckShipTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/ships/TwoDeckShipTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/ship/ShipCreationRequestExeption.java" />
         <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/ships/repository/PlayerShipsRepository.java" />
         <option value="$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/ships/repository/PlayerShipsRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/request/DoublePointRequestTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/field/Field.java" />
+        <option value="$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/field/FieldTest.java" />
       </list>
     </option>
   </component>
@@ -188,8 +179,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="960" />
-    <option name="width" value="960" />
+    <option name="width" value="1861" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -249,6 +239,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="homeworks" type="462c0819:PsiDirectoryNode" />
               <item name="seabatle" type="462c0819:PsiDirectoryNode" />
+              <item name="aplication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seaBatle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seaBatle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="homeworks" type="462c0819:PsiDirectoryNode" />
+              <item name="seabatle" type="462c0819:PsiDirectoryNode" />
               <item name="bean" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -260,7 +260,18 @@
               <item name="homeworks" type="462c0819:PsiDirectoryNode" />
               <item name="seabatle" type="462c0819:PsiDirectoryNode" />
               <item name="bean" type="462c0819:PsiDirectoryNode" />
-              <item name="ships" type="462c0819:PsiDirectoryNode" />
+              <item name="field" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seaBatle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seaBatle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="homeworks" type="462c0819:PsiDirectoryNode" />
+              <item name="seabatle" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="request" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="seaBatle" type="b2602c69:ProjectViewProjectNode" />
@@ -272,7 +283,6 @@
               <item name="seabatle" type="462c0819:PsiDirectoryNode" />
               <item name="bean" type="462c0819:PsiDirectoryNode" />
               <item name="ships" type="462c0819:PsiDirectoryNode" />
-              <item name="fillstrategy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="seaBatle" type="b2602c69:ProjectViewProjectNode" />
@@ -305,7 +315,17 @@
               <item name="homeworks" type="462c0819:PsiDirectoryNode" />
               <item name="seabatle" type="462c0819:PsiDirectoryNode" />
               <item name="exception" type="462c0819:PsiDirectoryNode" />
-              <item name="create" type="462c0819:PsiDirectoryNode" />
+              <item name="ship" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seaBatle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seaBatle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="homeworks" type="462c0819:PsiDirectoryNode" />
+              <item name="seabatle" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="seaBatle" type="b2602c69:ProjectViewProjectNode" />
@@ -335,7 +355,7 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="seabatle" type="462c0819:PsiDirectoryNode" />
-              <item name="ships" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="seaBatle" type="b2602c69:ProjectViewProjectNode" />
@@ -344,8 +364,18 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="seabatle" type="462c0819:PsiDirectoryNode" />
-              <item name="ships" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="field" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seaBatle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seaBatle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="seabatle" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="request" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="seaBatle" type="b2602c69:ProjectViewProjectNode" />
@@ -386,6 +416,24 @@
               <item name="internal" type="462c0819:PsiDirectoryNode" />
               <item name="requests" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="seaBatle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.hamcrest:hamcrest-core:1.3" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="seaBatle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.hamcrest:hamcrest-core:1.3" type="70bed36:NamedLibraryElementNode" />
+              <item name="hamcrest-core-1.3.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seaBatle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.hamcrest:hamcrest-core:1.3" type="70bed36:NamedLibraryElementNode" />
+              <item name="hamcrest-core-1.3.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="hamcrest" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -410,6 +458,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="homeworks.seabatle.bean.field" />
+      <recent name="homeworks.seabatle.bean.request" />
       <recent name="homeworks.seabatle.bean.ships.repository" />
       <recent name="homeworks.seabatle.bean.ships" />
       <recent name="homeworks.seabatle.aplication.parser" />
@@ -434,10 +484,38 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.All in seaBatle">
+    <configuration name="SeaBattleAp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homeworks.seabatle.aplication.SeaBattleAp" />
+      <module name="seaBatle" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homeworks.seabatle.aplication.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in seaBatle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seaBatle" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DoublePointRequestTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seaBatle" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homeworks.seabatle.bean.request.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="homeworks.seabatle.bean.request" />
+      <option name="MAIN_CLASS_NAME" value="homeworks.seabatle.bean.request.DoublePointRequestTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -453,38 +531,6 @@
       <option name="PACKAGE_NAME" value="homeworks.seabatle.bean.ships" />
       <option name="MAIN_CLASS_NAME" value="homeworks.seabatle.bean.ships.OneDeckShipTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OneDeckShipTest.containsCoords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seaBatle" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="homeworks.seabatle.bean.ships.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="homeworks.seabatle.bean.ships" />
-      <option name="MAIN_CLASS_NAME" value="homeworks.seabatle.bean.ships.OneDeckShipTest" />
-      <option name="METHOD_NAME" value="containsCoords" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OneDeckShipTest.decrementLife" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seaBatle" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="homeworks.seabatle.bean.ships.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="homeworks.seabatle.bean.ships" />
-      <option name="MAIN_CLASS_NAME" value="homeworks.seabatle.bean.ships.OneDeckShipTest" />
-      <option name="METHOD_NAME" value="decrementLife" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -508,10 +554,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in seaBatle" />
+        <item itemvalue="Application.SeaBattleAp" />
+        <item itemvalue="JUnit.DoublePointRequestTest" />
         <item itemvalue="JUnit.OneDeckShipTest" />
         <item itemvalue="JUnit.OneDeckShipTest.getId" />
-        <item itemvalue="JUnit.OneDeckShipTest.containsCoords" />
-        <item itemvalue="JUnit.OneDeckShipTest.decrementLife" />
       </list>
     </recent_temporary>
   </component>
@@ -528,47 +574,47 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581413807727</updated>
-      <workItem from="1581413810289" duration="14085000" />
+      <workItem from="1581413810289" duration="21032000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_seaBatle - 2020.02.11 at 16h 15m 05s.xml">
+    <history-entry file="All_in_seaBatle - 2020.02.11 at 18h 20m 32s.xml">
       <configuration name="All in seaBatle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_seaBatle - 2020.02.11 at 16h 16m 13s.xml">
+    <history-entry file="All_in_seaBatle - 2020.02.11 at 18h 21m 46s.xml">
       <configuration name="All in seaBatle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_seaBatle - 2020.02.11 at 16h 19m 30s.xml">
+    <history-entry file="All_in_seaBatle - 2020.02.11 at 18h 22m 31s.xml">
       <configuration name="All in seaBatle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_seaBatle - 2020.02.11 at 16h 19m 57s.xml">
+    <history-entry file="All_in_seaBatle - 2020.02.11 at 18h 23m 02s.xml">
       <configuration name="All in seaBatle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_seaBatle - 2020.02.11 at 16h 25m 49s.xml">
+    <history-entry file="All_in_seaBatle - 2020.02.11 at 18h 23m 52s.xml">
       <configuration name="All in seaBatle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_seaBatle - 2020.02.11 at 16h 26m 34s.xml">
+    <history-entry file="All_in_seaBatle - 2020.02.11 at 18h 25m 55s.xml">
       <configuration name="All in seaBatle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_seaBatle - 2020.02.11 at 16h 27m 21s.xml">
+    <history-entry file="All_in_seaBatle - 2020.02.11 at 18h 26m 26s.xml">
       <configuration name="All in seaBatle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_seaBatle - 2020.02.11 at 16h 27m 47s.xml">
+    <history-entry file="All_in_seaBatle - 2020.02.11 at 18h 27m 17s.xml">
       <configuration name="All in seaBatle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_seaBatle - 2020.02.11 at 16h 28m 49s.xml">
+    <history-entry file="All_in_seaBatle - 2020.02.11 at 18h 27m 40s.xml">
       <configuration name="All in seaBatle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_seaBatle - 2020.02.11 at 16h 29m 05s.xml">
+    <history-entry file="All_in_seaBatle - 2020.02.11 at 18h 28m 43s.xml">
       <configuration name="All in seaBatle" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14085000" />
+    <option name="totallyTimeSpent" value="21032000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="0" width="960" height="1040" extended-state="0" />
+    <frame x="0" y="0" width="1861" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />
@@ -577,11 +623,11 @@
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Capture Tool" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35333332" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26152137" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="DB Execution Console" />
       <window_info anchor="bottom" id="SQL" />
-      <window_info anchor="bottom" id="Terminal" weight="0.329849" />
+      <window_info anchor="bottom" id="Terminal" weight="0.31520534" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Messages" weight="0.32963374" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -589,8 +635,8 @@
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.329849" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39953542" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32881355" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.41694915" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -600,7 +646,7 @@
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Coverage" side_tool="true" visible="true" weight="0.033333335" />
+      <window_info anchor="right" id="Coverage" side_tool="true" visible="true" weight="0.25985563" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -610,7 +656,7 @@
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/seaBatle$All_in_seaBatle.ic" NAME="All in seaBatle Coverage Results" MODIFIED="1581426289839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/seaBatle$All_in_seaBatle.ic" NAME="All in seaBatle Coverage Results" MODIFIED="1581431122396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/seaBatle$RequestParserTest_testIncorrectLengthDoubleCoord.ic" NAME="RequestParserTest.testIncorrectLengthDoubleCoord Coverage Results" MODIFIED="1581417116729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>homeworks.seabatle.aplication.parser.*</FILTER>
     </SUITE>
@@ -629,9 +675,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/Main.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/field/StrikeResult.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/data/IncorrectDataException.java">
@@ -687,21 +730,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/aplication/SeaBattleAp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-680">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/request/SinglePointRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/request/DoublePointRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
@@ -759,13 +788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/ships/Ships.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -856,20 +878,103 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/ship/ShipNotFoundExeption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/ship/ShipCreationRequestExeption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding>
+            <element signature="e#240#241#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/ships/repository/PlayerShipsRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="737">
-          <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
+        <state relative-caret-position="255">
+          <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/ships/repository/PlayerShipsRepositoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+        <state relative-caret-position="-612">
+          <caret line="76" column="32" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2679#2680#0" expanded="true" />
+            <element signature="e#2718#2719#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/request/DoublePointRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding>
+            <element signature="e#410#411#0" expanded="true" />
+            <element signature="e#498#499#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/ships/Ships.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/aplication/SeaBattleAp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/org/hamcrest/MatcherAssert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/request/DoublePointRequestTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/homeworks/seabatle/bean/field/FieldTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="74" column="37" selection-start-line="74" selection-start-column="37" selection-end-line="74" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/field/StrikeResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/field/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="39" column="19" lean-forward="true" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
         </state>
       </provider>
     </entry>

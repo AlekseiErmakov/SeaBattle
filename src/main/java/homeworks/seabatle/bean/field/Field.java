@@ -7,11 +7,10 @@ import lombok.Data;
 import java.util.List;
 
 
-@Data
+
 public class Field {
     private int length;
     private int width;
-    private int shipAmount;
     private String[][] matrix;
     private ShipsRepository repository;
     private List<Ship> shipList;
@@ -20,7 +19,6 @@ public class Field {
     public Field (ShipsRepository repository){
         length = 10;
         width = 10;
-        shipAmount = 10;
         matrix = new String[length][width];
         this.repository = repository;
         shipList = repository.getAll();
@@ -28,9 +26,12 @@ public class Field {
     }
     public StrikeResult getStrikeRes(int x, int y){
 
-        switchChar(x,y);
+        System.out.println(x + "тут х");
+        System.out.println(y + "тут у");
+        System.out.println(matrix[x][y]);
         String square = matrix[x][y];
-        if (square.equals("D")){
+        switchChar(x,y);
+        if (square.equals(deck)){
             Ship ship = repository.getShip(x,y);
             if (ship.getLifes() > 1){
                 ship.decrementLife();
@@ -56,7 +57,7 @@ public class Field {
         StringBuilder sb = new StringBuilder();
         for(int i = 0; i < matrix.length; i++){
             for (int j = 0; j < matrix[i].length; j++){
-                sb.append(matrix[i][j]);
+                sb.append(matrix[j][i]);
             }
             sb.append("\n");
         }
@@ -65,7 +66,6 @@ public class Field {
 
     private void switchChar(int x, int y){
         String target = matrix[x][y];
-        String deck = "D";
         String killed = "X";
         String empty = "*";
         matrix[x][y] = target.equals(deck) ? killed : empty;
@@ -85,8 +85,8 @@ public class Field {
     }
     private void setDeckCell(int  ... ints){
         for (int xy : ints){
-            int x = xy/10;
-            int y = xy%10;
+            int x = xy%10;
+            int y = xy/10;
             matrix[x][y] = deck;
         }
 
