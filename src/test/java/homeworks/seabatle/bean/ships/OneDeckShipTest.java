@@ -39,7 +39,7 @@ public class OneDeckShipTest {
     public void containsCoords() {
         assertFalse(first.containsCoords(8,0));
         assertFalse(first.containsCoords(1,10));
-        assertTrue(first.containsCoords(9,0));
+        assertTrue(first.containsCoords(0,9));
     }
 
     @Test

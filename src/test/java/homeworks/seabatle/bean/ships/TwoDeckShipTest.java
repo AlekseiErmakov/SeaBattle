@@ -35,10 +35,10 @@ public class TwoDeckShipTest {
     @Test
     public void containsCoords() {
 
-        assertTrue(gorShip.containsCoords(4,5));
+        assertTrue(gorShip.containsCoords(5,4));
         assertFalse(gorShip.containsCoords(3,6));
 
-        assertTrue(verShip.containsCoords(3,6));
+        assertTrue(verShip.containsCoords(6,3));
         assertFalse(verShip.containsCoords(4,5));
     }
 

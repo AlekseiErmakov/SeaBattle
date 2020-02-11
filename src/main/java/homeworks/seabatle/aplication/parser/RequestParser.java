@@ -14,15 +14,15 @@ public class RequestParser {
     public SinglePointRequest getOneCoord(String request){
 
         if (1 < request.length() && request.length() <= 3){
-            String xStr = request.replaceAll("[A-Z]","");
-            String yStr = request.substring(0,1);
+            String yStr = request.replaceAll("[A-Z]","");
+            String xStr = request.substring(0,1);
             int x;
-            int y = chekInt(xStr)-1;
-            if (strCoords.contains(yStr) && 0 <= y && y <= 9){
-                x = strCoords.indexOf(yStr);
+            int y = chekInt(yStr)-1;
+            if (strCoords.contains(xStr) && 0 <= y && y <= 9){
+                x = strCoords.indexOf(xStr);
                 return new SinglePointRequest(x,y);
             }
-                throw new IncorrectInputParseExeption(yStr + " is not a coord");
+                throw new IncorrectInputParseExeption(xStr + " is not a coord");
         }else {
             throw new IncorrectInputParseExeption(request + " are not valid coords ");
         }
@@ -45,14 +45,14 @@ public class RequestParser {
                 throw new IncorrectInputParseExeption(request + " is not a coords");
             }
 
-            int x1 = chekInt(xOneStr) - 1;
-            int x2 = chekInt(xTwoStr) - 1;
-            int y1;
-            int y2;
-            if (strCoords.contains(yOneStr) && strCoords.contains(yTwoStr)
-                    && 0 <= x1 && x1 <=10 && 0 <= x2 && x2 <= 10){
-                y1 = strCoords.indexOf(yOneStr);
-                y2 = strCoords.indexOf(yTwoStr);
+            int x1;
+            int x2;
+            int y1 = chekInt(yOneStr) - 1;
+            int y2 = chekInt(yTwoStr) - 1;
+            if (strCoords.contains(xOneStr) && strCoords.contains(xTwoStr)
+                    && 0 <= y1 && y1 <=10 && 0 <= y2 && y2 <= 10){
+                x1 = strCoords.indexOf(xOneStr);
+                x2 = strCoords.indexOf(xTwoStr);
                 return new DoublePointRequest(x1,y1,x2,y2);
             } else {
                 throw new IncorrectInputParseExeption(request + " is not a ccord");

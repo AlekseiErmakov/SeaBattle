@@ -44,8 +44,8 @@ public class FourDeckShipTest {
 
     @Test
     public void containsCoords() {
-        assertTrue(verShip.containsCoords(2,3));
-        assertFalse(verShip.containsCoords(1,2));
+        assertTrue(verShip.containsCoords(3,2));
+        assertFalse(verShip.containsCoords(0,5));
 
         assertTrue(gorShip.containsCoords(0,0));
         assertFalse(gorShip.containsCoords(5,5));

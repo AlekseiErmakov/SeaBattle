@@ -25,6 +25,7 @@ public class PlayerShipsRepositoryTest {
     ThreeDeckShip three;
     TwoDeckShip two;
     OneDeckShip one;
+    OneDeckShip oneExt;
     private static final String SUCCESS = "Ship successfully added!";
     @Before
     public void setUp() throws Exception {
@@ -38,6 +39,10 @@ public class PlayerShipsRepositoryTest {
         two = new TwoDeckShip(request3);
         SinglePointRequest request4 = parser.getOneCoord("B6");
         one = new OneDeckShip(request4);
+        SinglePointRequest request5 = parser.getOneCoord("J10");
+        oneExt = new OneDeckShip(request5);
+
+
 
     }
     @Test
@@ -80,11 +85,11 @@ public class PlayerShipsRepositoryTest {
     @Test
     public void testGetShip() {
         repository.addShip(four);
-        Ship ship4 = repository.getShip(2,1);
+        Ship ship4 = repository.getShip(1,2);
         assertThat(ship4,is(four));
 
         repository.addShip(three);
-        Ship ship3 = repository.getShip(1,3);
+        Ship ship3 = repository.getShip(3,1);
         assertThat(ship3,is(three));
 
         repository.addShip(two);
@@ -94,18 +99,30 @@ public class PlayerShipsRepositoryTest {
         repository.delete(four);
 
         repository.addShip(one);
-        Ship ship1 = repository.getShip(5,1);
+        Ship ship1 = repository.getShip(1,5);
         assertThat(ship1,is(one));
+
+    }
+    @Test
+    public void testGetOneShip(){
+
+        repository.addShip(oneExt);
+        repository.addShip(one);
+        repository.delete(one);
+
+
+        repository.getShip(9,9);
+        ;
 
     }
 
     @Test
     public void testUpdateShip() {
         repository.addShip(four);
-        assertEquals(4,repository.getShip(2,1).getLifes());
+        assertEquals(4,repository.getShip(1,2).getLifes());
         four.decrementLife();
         repository.updateShip(four);
-        assertEquals(3,repository.getShip(2,1).getLifes());
+        assertEquals(3,repository.getShip(1,2).getLifes());
 
     }
 

@@ -15,9 +15,10 @@ public class PlayerShipsRepository implements ShipsRepository{
     }
     @Override
     public Ship getShip(int x, int y) {
-        for (Ship ship : ships){
-            if (ship.containsCoords(x,y)){
-                return ship;
+        for (int i=0 ;i< ships.size();i++){
+            System.out.println(ships.get(i).containsCoords(x,y));
+            if (ships.get(i).containsCoords(x,y)){
+                return ships.get(i);
             }
         }
         throw new ShipNotFoundExeption("something goes wrong");

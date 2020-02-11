@@ -3,6 +3,7 @@ package homeworks.seabatle.aplication;
 
 import homeworks.seabatle.aplication.parser.RequestParser;
 import homeworks.seabatle.bean.field.Field;
+import homeworks.seabatle.bean.field.StrikeResult;
 import homeworks.seabatle.bean.players.Computer;
 import homeworks.seabatle.bean.players.Player;
 import homeworks.seabatle.bean.players.User;
@@ -11,6 +12,7 @@ import homeworks.seabatle.bean.ships.repository.PlayerShipsRepository;
 import homeworks.seabatle.bean.ships.repository.ShipsRepository;
 import homeworks.seabatle.board.GameBoard;
 import homeworks.seabatle.exception.IncorrectRequestException;
+import homeworks.seabatle.exception.shoot.IncorrectShootRequestException;
 import homeworks.seabatle.generator.AutoGeneratorService;
 import homeworks.seabatle.generator.Generateble;
 import homeworks.seabatle.generator.GeneratorService;
@@ -57,13 +59,36 @@ public class SeaBattleAp implements MyAplication {
         //играем
         String result = runBattle(reader);
     }
+
     private String runBattle(BufferedReader reader){
         boolean isRun = true;
-        String result = null;
+        String result = "Game Over";
         while (isRun){
-
+            isRun = shoot(playerOne,playerTwo,reader);
+            if (!isRun){
+                break;
+            }
+            isRun = shoot(playerTwo,playerOne,reader);
         }
         return result;
+    }
+    @SneakyThrows
+    private boolean shoot(Player shooter, Player defender,BufferedReader reader){
+        boolean shooting = true;
+        StrikeResult strikeResult1 = null;
+        while (shooting){
+            System.out.println(shooter.getName() + " shooting");
+            try {
+                strikeResult1 = gameBoard.getPlayerStrikeResult(reader.readLine(),defender);
+                System.out.println(strikeResult1.getDescription());
+                shooting = false;
+            } catch (IncorrectShootRequestException e){
+                System.out.println(e.getMessage());
+            }
+        }
+
+
+        return !strikeResult1.equals(StrikeResult.LOSE);
     }
     private ShipsRepository generateField(Player player, BufferedReader reader){
         Generateble generator;
@@ -125,6 +150,7 @@ public class SeaBattleAp implements MyAplication {
                     System.out.println(e.getMessage());
                 }
             }
+            isAded = false;
         }
         return repository;
     }

@@ -23,14 +23,14 @@ public class RequestParserTest {
         String userRequest = "C2";
         SinglePointRequest request = parser.getOneCoord(userRequest);
 
-        assertEquals(2,request.getY());
-        assertEquals(1,request.getX());
+        assertEquals(1,request.getY());
+        assertEquals(2,request.getX());
 
         String userRequest2 = "G4";
         SinglePointRequest request2 = parser.getOneCoord(userRequest2);
 
-        assertEquals(6,request2.getY());
-        assertEquals(3,request2.getX());
+        assertEquals(3,request2.getY());
+        assertEquals(6,request2.getX());
     }
 
     @Test
@@ -38,26 +38,26 @@ public class RequestParserTest {
         String userRequest = "C2 C5";
         DoublePointRequest request = parser.getTwoCoords(userRequest);
 
-        assertEquals(2,request.getYOne());
-        assertEquals(1,request.getXOne());
-        assertEquals(2,request.getYTwo());
-        assertEquals(4,request.getXTwo());
+        assertEquals(1,request.getYOne());
+        assertEquals(2,request.getXOne());
+        assertEquals(4,request.getYTwo());
+        assertEquals(2,request.getXTwo());
 
         String userRequest2 = "D4 G4";
         DoublePointRequest request2 = parser.getTwoCoords(userRequest2);
 
         assertEquals(3,request2.getYOne());
         assertEquals(3,request2.getXOne());
-        assertEquals(6,request2.getYTwo());
-        assertEquals(3,request2.getXTwo());
+        assertEquals(3,request2.getYTwo());
+        assertEquals(6,request2.getXTwo());
 
         String userRequest3 = "D10 G10";
         DoublePointRequest request3 = parser.getTwoCoords(userRequest3);
 
-        assertEquals(3,request3.getYOne());
-        assertEquals(9,request3.getXOne());
-        assertEquals(6,request3.getYTwo());
-        assertEquals(9,request3.getXTwo());
+        assertEquals(9,request3.getYOne());
+        assertEquals(3,request3.getXOne());
+        assertEquals(9,request3.getYTwo());
+        assertEquals(6,request3.getXTwo());
     }
 
     @Test(expected = IncorrectInputParseExeption.class)

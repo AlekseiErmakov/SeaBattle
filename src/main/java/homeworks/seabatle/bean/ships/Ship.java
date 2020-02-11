@@ -23,7 +23,7 @@ public abstract class Ship {
     public Ship (SinglePointRequest request){
         int x = request.getX();
         int y = request.getY();
-        int cell = y * xConst + x;
+        int cell = x * xConst + y;
         shipCoords = new int[1];
         shipCoords[0] = cell;
         lifes = shipCoords.length;
@@ -39,15 +39,15 @@ public abstract class Ship {
         int cell;
         int length;
         if (x2 - x1 == 0){
-            fillStrategy = new VerticalFillStrategy();
+            fillStrategy = new GorrizontalFillStrategy();
             int minY = y1 < y2 ? y1 : y2;
-            cell = minY*xConst + x1;
+            cell = x2 *xConst + minY;
             length = Math.abs(y2-y1) + 1;
             lifes = length;
         }else {
-            fillStrategy = new GorrizontalFillStrategy();
+            fillStrategy = new VerticalFillStrategy();
             int minX = x1 < x2 ? x1 : x2;
-            cell = y1*xConst + minX;
+            cell = minX*xConst + y1;
             length = (Math.abs(x2-x1) + 1);
             lifes = length;
         }
@@ -58,7 +58,7 @@ public abstract class Ship {
         lifes --;
     }
     public boolean containsCoords(int x, int y){
-        int cell = y * xConst + x;
+        int cell = x * xConst + y;
         for (int i : shipCoords){
             if (cell == i){
                 return true;
@@ -69,11 +69,11 @@ public abstract class Ship {
 
     public boolean isShipZone(int[] anotherShip){
         for (int i = 0; i < shipCoords.length; i++){
-            int y1 = shipCoords[i]/10;
-            int x1 = shipCoords[i]%10;
+            int x1 = shipCoords[i]/10;
+            int y1 = shipCoords[i]%10;
             for (int j = 0; j < anotherShip.length; j++){
-                int y2 = anotherShip[j]/10;
-                int x2 = anotherShip[j]%10;
+                int x2 = anotherShip[j]/10;
+                int y2 = anotherShip[j]%10;
                 if (Math.abs(x2-x1) <= 1 && Math.abs(y2-y1) <= 1){
                     return true;
                 }

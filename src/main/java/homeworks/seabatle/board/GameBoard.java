@@ -19,7 +19,7 @@ public class GameBoard {
     public StrikeResult getPlayerStrikeResult(String request, Player player){
         Field playerField = player.getField();
         if (request.length() == 2){
-            int x = (checkInt(request.substring(1,2))-1);
+            int x = checkInt(request.replaceAll("[A-Z]",""));
             int y = yCoordInterpritator(request.substring(0,1));
             StrikeResult result = playerField.getStrikeRes(x,y);
             return result;

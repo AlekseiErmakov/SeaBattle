@@ -15,7 +15,7 @@ public class Field {
     private ShipsRepository repository;
     private List<Ship> shipList;
     private String deck = "D";
-    private String water = "W";
+    private String water = "*";
     public Field (ShipsRepository repository){
         length = 10;
         width = 10;
@@ -26,9 +26,6 @@ public class Field {
     }
     public StrikeResult getStrikeRes(int x, int y){
 
-        System.out.println(x + "тут х");
-        System.out.println(y + "тут у");
-        System.out.println(matrix[x][y]);
         String square = matrix[x][y];
         switchChar(x,y);
         if (square.equals(deck)){
@@ -45,7 +42,7 @@ public class Field {
                     return StrikeResult.LOSE;
                 }
             }
-        } else if (square.equals("X")||square.equals("*")){
+        } else if (square.equals("X")||square.equals("E")){
             return StrikeResult.SHOOT;
         }
         else {
@@ -57,7 +54,8 @@ public class Field {
         StringBuilder sb = new StringBuilder();
         for(int i = 0; i < matrix.length; i++){
             for (int j = 0; j < matrix[i].length; j++){
-                sb.append(matrix[j][i]);
+                sb.append(matrix[i][j]);
+                sb.append(" ");
             }
             sb.append("\n");
         }
@@ -67,7 +65,7 @@ public class Field {
     private void switchChar(int x, int y){
         String target = matrix[x][y];
         String killed = "X";
-        String empty = "*";
+        String empty = "E";
         matrix[x][y] = target.equals(deck) ? killed : empty;
     }
 
@@ -85,8 +83,8 @@ public class Field {
     }
     private void setDeckCell(int  ... ints){
         for (int xy : ints){
-            int x = xy%10;
-            int y = xy/10;
+            int x = xy/10;
+            int y = xy%10;
             matrix[x][y] = deck;
         }
 
