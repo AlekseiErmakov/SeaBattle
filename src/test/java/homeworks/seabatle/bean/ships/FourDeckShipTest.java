@@ -14,15 +14,20 @@ import static org.junit.Assert.*;
 public class FourDeckShipTest {
     FourDeckShip gorShip;
     FourDeckShip verShip;
+    FourDeckShip notInZoneShip;
     @Before
     public void init(){
         RequestParser parser = new RequestParser();
         DoublePointRequest GorRequest = parser.getTwoCoords("A1 A4");
         DoublePointRequest VerRequest = parser.getTwoCoords("A3 D3");
 
+        DoublePointRequest notInZone = parser.getTwoCoords("C5 F5");
+
 
         gorShip = new FourDeckShip(GorRequest);
         verShip = new FourDeckShip(VerRequest);
+
+        notInZoneShip = new FourDeckShip(notInZone);
 
     }
 
@@ -49,6 +54,9 @@ public class FourDeckShipTest {
     @Test
     public void isShipZone() {
        assertTrue(verShip.isShipZone(gorShip.getShipCoords()));
+
+       assertFalse(verShip.isShipZone(notInZoneShip.getShipCoords()));
+       assertFalse(gorShip.isShipZone(notInZoneShip.getShipCoords()));
     }
 
     @Test

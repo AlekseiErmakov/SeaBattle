@@ -12,7 +12,7 @@ import java.util.Random;
 
 
 public abstract class Ship {
-    private FillStrategy fillStrategy;
+
     @Getter
     private long id;
     private static final int xConst = 10;
@@ -23,11 +23,13 @@ public abstract class Ship {
     public Ship (SinglePointRequest request){
         int x = request.getX();
         int y = request.getY();
-        int cell = x * xConst + y;
+        int cell = y * xConst + x;
         shipCoords = new int[1];
         shipCoords[0] = cell;
+        lifes = shipCoords.length;
     }
     public Ship(DoublePointRequest request){
+        FillStrategy fillStrategy;
         Random r = new Random();
         id = r.nextLong();
         int x1 = request.getXOne();
@@ -45,7 +47,7 @@ public abstract class Ship {
         }else {
             fillStrategy = new GorrizontalFillStrategy();
             int minX = x1 < x2 ? x1 : x2;
-            cell = minX*xConst + y1;
+            cell = y1*xConst + minX;
             length = (Math.abs(x2-x1) + 1);
             lifes = length;
         }

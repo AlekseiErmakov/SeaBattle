@@ -59,10 +59,15 @@ public class PlayerShipsRepository implements ShipsRepository{
 
     @Override
     public void delete(Ship ship) {
+        int index = -1;
         for (Ship inListShip : ships){
             if (inListShip.getId() == ship.getId()){
-                ships.remove(inListShip);
+               index = ships.indexOf(inListShip);
             }
         }
+        if (index != -1){
+            ships.remove(index);
+        }
+
     }
 }
