@@ -1,12 +1,22 @@
 package homeworks.seabatle.bean.ships;
 
 
-
-import homeworks.seabatle.bean.request.DoublePointRequest;
+import homeworks.seabatle.bean.coordinates.Coordinate;
+import homeworks.seabatle.exception.ship.ShipCreationRequestExeption;
 
 public class FourDeckShip extends Ship{
-    public FourDeckShip(DoublePointRequest request){
-        super(request);
-    }
 
+    public FourDeckShip(){
+        super();
+    }
+    @Override
+    public void setShipCoords(Coordinate coordinate) throws ShipCreationRequestExeption{
+        int[] coords = multideckerCoords(coordinate);
+        if (Math.abs(coords[3]-coords[1]) == 3 && Math.abs(coords[2]-coords[0]) == 0 ||
+                Math.abs(coords[2]-coords[0]) == 3 && Math.abs(coords[3]-coords[1]) == 0){
+            super.setShipCoords(coords);
+        } else {
+            throw new ShipCreationRequestExeption("Ship length is to small for FourDecker");
+        }
+    }
 }

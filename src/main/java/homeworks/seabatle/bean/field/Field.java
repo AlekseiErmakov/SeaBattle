@@ -6,54 +6,50 @@ import lombok.Data;
 
 import java.util.List;
 
-
-
 public class Field {
-    private int length;
-    private int width;
     private String[][] matrix;
     private ShipsRepository repository;
     private List<Ship> shipList;
     private String deck = "D";
     private String water = "*";
-    public Field (ShipsRepository repository){
-        length = 10;
-        width = 10;
+
+    public Field(ShipsRepository repository) {
+        int length = 10;
+        int width = 10;
         matrix = new String[length][width];
         this.repository = repository;
         shipList = repository.getAll();
         createField();
     }
-    public StrikeResult getStrikeRes(int x, int y){
 
+    public StrikeResult getStrikeRes(int x, int y) {
         String square = matrix[x][y];
-        switchChar(x,y);
-        if (square.equals(deck)){
-            Ship ship = repository.getShip(x,y);
-            if (ship.getLifes() > 1){
+        switchChar(x, y);
+        if (square.equals(deck)) {
+            Ship ship = repository.getShip(x, y);
+            if (ship.getLifes() > 1) {
                 ship.decrementLife();
                 repository.updateShip(ship);
                 return StrikeResult.WOUND;
-            } else{
+            } else {
                 repository.delete(ship);
-                if (repository.getSize() > 0){
+                if (repository.getSize() > 0) {
                     return StrikeResult.KILL;
-                }else {
+                } else {
                     return StrikeResult.LOSE;
                 }
             }
-        } else if (square.equals("X")||square.equals("E")){
+        } else if (square.equals("X") || square.equals("E")) {
             return StrikeResult.SHOOT;
-        }
-        else {
+        } else {
             return StrikeResult.MISS;
         }
     }
 
-    public String print(){
+    public String print() {
         StringBuilder sb = new StringBuilder();
-        for(int i = 0; i < matrix.length; i++){
-            for (int j = 0; j < matrix[i].length; j++){
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
                 sb.append(matrix[i][j]);
                 sb.append(" ");
             }
@@ -62,32 +58,32 @@ public class Field {
         return sb.toString();
     }
 
-    private void switchChar(int x, int y){
+    private void switchChar(int x, int y) {
         String target = matrix[x][y];
         String killed = "X";
         String empty = "E";
         matrix[x][y] = target.equals(deck) ? killed : empty;
     }
 
-    private void createField(){
-        for (Ship ship : shipList){
+    private void createField() {
+        for (Ship ship : shipList) {
             setDeckCell(ship.getShipCoords());
         }
-        for (int i = 0; i < matrix.length; i++){
-            for (int j = 0; j < matrix[0].length; j++){
-                if (matrix[i][j]== null){
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                if (matrix[i][j] == null) {
                     matrix[i][j] = water;
                 }
             }
         }
     }
-    private void setDeckCell(int  ... ints){
-        for (int xy : ints){
-            int x = xy/10;
-            int y = xy%10;
+
+    private void setDeckCell(int... ints) {
+        for (int xy : ints) {
+            int x = xy / 10;
+            int y = xy % 10;
             matrix[x][y] = deck;
         }
-
     }
 
 

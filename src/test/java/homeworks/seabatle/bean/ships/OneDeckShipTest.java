@@ -1,7 +1,8 @@
 package homeworks.seabatle.bean.ships;
 
-import homeworks.seabatle.aplication.parser.RequestParser;
-import homeworks.seabatle.bean.request.SinglePointRequest;
+
+import homeworks.seabatle.bean.coordinates.Coordinate;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,15 +18,18 @@ public class OneDeckShipTest {
     OneDeckShip third;
     @Before
     public void setUp() throws Exception {
-        RequestParser parser = new RequestParser();
 
-        SinglePointRequest requestFirst = parser.getOneCoord("A10");
-        SinglePointRequest requestSecond = parser.getOneCoord("F6");
-        SinglePointRequest requestThird = parser.getOneCoord("E7");
 
-        first = new OneDeckShip(requestFirst);
-        second = new OneDeckShip(requestSecond);
-        third = new OneDeckShip(requestThird);
+        Coordinate requestFirst = new Coordinate("A10");
+        Coordinate requestSecond = new Coordinate("F6");
+        Coordinate requestThird = new Coordinate("E7");
+
+        first = new OneDeckShip();
+        first.setShipCoords(requestFirst);
+        second = new OneDeckShip();
+        second.setShipCoords(requestSecond);
+        third = new OneDeckShip();
+        third.setShipCoords(requestThird);
     }
 
     @Test

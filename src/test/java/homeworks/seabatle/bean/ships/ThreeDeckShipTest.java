@@ -1,7 +1,8 @@
 package homeworks.seabatle.bean.ships;
 
-import homeworks.seabatle.aplication.parser.RequestParser;
-import homeworks.seabatle.bean.request.DoublePointRequest;
+
+import homeworks.seabatle.bean.coordinates.Coordinate;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,16 +18,18 @@ public class ThreeDeckShipTest {
     ThreeDeckShip notInZoneShip;
     @Before
     public void setUp() throws Exception {
-        RequestParser parser = new RequestParser();
 
-        DoublePointRequest gorRequest = parser.getTwoCoords("F4 F6");
-        DoublePointRequest verRequest = parser.getTwoCoords("F4 H4");
-        DoublePointRequest notInZoneRequest = parser.getTwoCoords("H8 H10");
 
-        gorShip = new ThreeDeckShip(gorRequest);
+        Coordinate gorRequest = new Coordinate("F4 F6");
+        Coordinate verRequest = new Coordinate("F4 H4");
+        Coordinate notInZoneRequest = new Coordinate("H8 H10");
 
-        verShip = new ThreeDeckShip(verRequest);
-        notInZoneShip = new ThreeDeckShip(notInZoneRequest);
+        gorShip = new ThreeDeckShip();
+        gorShip.setShipCoords(gorRequest);
+        verShip = new ThreeDeckShip();
+        verShip.setShipCoords(verRequest);
+        notInZoneShip = new ThreeDeckShip();
+        notInZoneShip.setShipCoords(notInZoneRequest);
     }
 
     @Test

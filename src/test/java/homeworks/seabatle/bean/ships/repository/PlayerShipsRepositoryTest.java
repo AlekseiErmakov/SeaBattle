@@ -1,9 +1,7 @@
 package homeworks.seabatle.bean.ships.repository;
 
 
-import homeworks.seabatle.aplication.parser.RequestParser;
-import homeworks.seabatle.bean.request.DoublePointRequest;
-import homeworks.seabatle.bean.request.SinglePointRequest;
+import homeworks.seabatle.bean.coordinates.Coordinate;
 import homeworks.seabatle.bean.ships.*;
 import homeworks.seabatle.exception.ship.ShipCreationRequestExeption;
 import homeworks.seabatle.exception.ship.ShipNotFoundExeption;
@@ -20,7 +18,7 @@ import static org.junit.Assert.*;
 
 public class PlayerShipsRepositoryTest {
     PlayerShipsRepository repository;
-    RequestParser parser;
+
     FourDeckShip four;
     ThreeDeckShip three;
     TwoDeckShip two;
@@ -30,17 +28,22 @@ public class PlayerShipsRepositoryTest {
     @Before
     public void setUp() throws Exception {
         repository = new PlayerShipsRepository();
-        parser = new RequestParser();
-        DoublePointRequest request1 = parser.getTwoCoords("B2 B5");
-        four = new FourDeckShip(request1);
-        DoublePointRequest request2 = parser.getTwoCoords("D1 D3");
-        three = new ThreeDeckShip(request2);
-        DoublePointRequest request3 = parser.getTwoCoords("F6 G6");
-        two = new TwoDeckShip(request3);
-        SinglePointRequest request4 = parser.getOneCoord("B6");
-        one = new OneDeckShip(request4);
-        SinglePointRequest request5 = parser.getOneCoord("J10");
-        oneExt = new OneDeckShip(request5);
+
+        Coordinate request1 = new Coordinate("B2 B5");
+        four = new FourDeckShip();
+        four.setShipCoords(request1);
+        Coordinate request2 = new Coordinate("D1 D3");
+        three = new ThreeDeckShip();
+        three.setShipCoords(request2);
+        Coordinate request3 = new Coordinate("F6 G6");
+        two = new TwoDeckShip();
+        two.setShipCoords(request3);
+        Coordinate request4 = new Coordinate("B6");
+        one = new OneDeckShip();
+        one.setShipCoords(request4);
+        Coordinate request5 = new Coordinate("J10");
+        oneExt = new OneDeckShip();
+        oneExt.setShipCoords(request5);
 
 
 

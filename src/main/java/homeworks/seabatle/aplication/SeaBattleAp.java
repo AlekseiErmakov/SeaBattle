@@ -1,233 +1,201 @@
 package homeworks.seabatle.aplication;
 
 
-import homeworks.seabatle.aplication.parser.RequestParser;
+import homeworks.seabatle.bean.coordinates.Coordinate;
 import homeworks.seabatle.bean.field.Field;
 import homeworks.seabatle.bean.field.StrikeResult;
 import homeworks.seabatle.bean.players.Computer;
 import homeworks.seabatle.bean.players.Player;
 import homeworks.seabatle.bean.players.User;
+import homeworks.seabatle.bean.ships.OneDeckShip;
 import homeworks.seabatle.bean.ships.Ship;
 import homeworks.seabatle.bean.ships.repository.PlayerShipsRepository;
 import homeworks.seabatle.bean.ships.repository.ShipsRepository;
 import homeworks.seabatle.board.GameBoard;
 import homeworks.seabatle.exception.IncorrectRequestException;
+import homeworks.seabatle.exception.parser.IncorrectInputParseExeption;
 import homeworks.seabatle.exception.shoot.IncorrectShootRequestException;
-import homeworks.seabatle.generator.AutoGeneratorService;
-import homeworks.seabatle.generator.Generateble;
-import homeworks.seabatle.generator.GeneratorService;
+
+import homeworks.seabatle.generator.shipgenerator.ShipGenerator;
 import lombok.SneakyThrows;
+import lombok.ToString;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
+@ToString
 public class SeaBattleAp implements MyAplication {
     private Player playerOne;
     private Player playerTwo;
     GameBoard gameBoard;
-    private RequestParser parser = new RequestParser();
+
     StartingLogo log = new StartingLogo();
     Thread logoThread = new Thread(log);
+
     @Override
     public void run() {
         playerOne = new User();
-        logoThread.start();
+        //logoThread.start();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         //выбираем сингл или мультиплеер
-
-        chooseRegime(reader);
+        System.out.println(chooseRegime(reader));
         //называем игроков
+        System.out.println(nameUsers(reader));
+        //генерируем поле
+        System.out.println(createGameBoard(reader));
+        //показываем игровое поле
+        gameBoard.printBatlefield();
+        //играем
+        runBattle(reader);
+    }
 
+    private String nameUsers(BufferedReader reader) {
         playerOne.setName(chooseName(reader));
         String pOneName = playerOne.getName();
-        if (playerTwo instanceof User){
+        if (playerTwo instanceof User) {
             playerTwo.setName(chooseName(reader));
         }
         String pTwoname = playerTwo.getName();
+        return "Привет " + pOneName + "! " + "Привет " + pTwoname + "!";
+    }
 
-        System.out.println("Привет " + pOneName + "! " + "Привет " + pTwoname + "! ");
-        //генерируем поле
+    private String createGameBoard(BufferedReader reader) {
         ShipsRepository pOneShipsRep = generateField(playerOne, reader);
         ShipsRepository pTwoShipsRep = generateField(playerTwo, reader);
         Field playerOneField = new Field(pOneShipsRep);
         playerOne.setField(playerOneField);
         Field playerTwoField = new Field(pTwoShipsRep);
         playerTwo.setField(playerTwoField);
-        gameBoard = new GameBoard(playerOne,playerTwo);
-        gameBoard.printBatlefield();
-        //играем
-        String result = runBattle(reader);
+        gameBoard = new GameBoard(playerOne, playerTwo);
+        return "Game Board is created!";
     }
 
-    private String runBattle(BufferedReader reader){
+    private String runBattle(BufferedReader reader) {
         boolean isRun = true;
         String result = "Game Over";
-        while (isRun){
-            isRun = shoot(playerOne,playerTwo,reader);
-            if (!isRun){
+        while (isRun) {
+            isRun = shoot(playerOne, playerTwo, reader);
+            if (!isRun) {
                 break;
             }
-            isRun = shoot(playerTwo,playerOne,reader);
+            isRun = shoot(playerTwo, playerOne, reader);
         }
         return result;
     }
+
     @SneakyThrows
-    private boolean shoot(Player shooter, Player defender,BufferedReader reader){
+    private boolean shoot(Player shooter, Player defender, BufferedReader reader) {
         boolean shooting = true;
         StrikeResult strikeResult1 = null;
-        while (shooting){
+        while (shooting) {
             System.out.println(shooter.getName() + " shooting");
             try {
-                strikeResult1 = gameBoard.getPlayerStrikeResult(reader.readLine(),defender);
+                strikeResult1 = gameBoard.getPlayerStrikeResult(reader.readLine(), defender);
                 System.out.println(strikeResult1.getDescription());
                 shooting = false;
-            } catch (IncorrectShootRequestException e){
+            } catch (IncorrectShootRequestException e) {
                 System.out.println(e.getMessage());
             }
         }
-
-
         return !strikeResult1.equals(StrikeResult.LOSE);
     }
-    private ShipsRepository generateField(Player player, BufferedReader reader){
-        Generateble generator;
+
+    private ShipsRepository generateField(Player player, BufferedReader reader) {
         ShipsRepository repository;
-        System.out.println(String.format("%s now let's generate your field",player.getName()));
-        if (player instanceof Computer){
-            generator = new AutoGeneratorService();
-            return generator.generate();
+        System.out.println(String.format("%s now let's generate your field", player.getName()));
+        if (player instanceof Computer) {
+            repository = getRepository(new ShipGenerator(), reader);
+            return repository;
         } else {
-            repository = getRepository(new GeneratorService(),reader);
+            repository = getRepository(new ShipGenerator(), reader);
             return repository;
         }
-
     }
-    private ShipsRepository getRepository(GeneratorService generator, BufferedReader reader){
+
+    private ShipsRepository getRepository(ShipGenerator generator, BufferedReader reader) {
         ShipsRepository repository = new PlayerShipsRepository();
-
-        boolean isAded = false;
-        while (!isAded){
-            try {
-                repository.addShip(generateFourDeckShip(generator,reader));
-                isAded = true;
-            } catch (IncorrectRequestException e){
-                System.out.println(e.getMessage());
-            }
-
-        }
-        isAded = false;
-        for (int i = 0; i < 2; i++){
-            while (!isAded){
-                try {
-                    repository.addShip(generateThreeDeckShip(generator,reader));
-                    isAded = true;
-                } catch (IncorrectRequestException e){
-                    System.out.println(e.getMessage());
-                }
-            }
-            isAded = false;
-        }
-        isAded = false;
-        for (int i = 0; i < 3; i++){
-            while (!isAded){
-                try {
-                    repository.addShip(generateTwoDeckShip(generator,reader));
-                    isAded = true;
-                } catch (IncorrectRequestException e){
-                    System.out.println(e.getMessage());
-                }
-            }
-            isAded = false;
-        }
-        isAded = false;
-        for (int i = 0; i < 4; i++){
-            while (!isAded){
-                try {
-                    repository.addShip(generateOneDeckShip(generator,reader));
-                    isAded = true;
-                } catch (IncorrectRequestException e){
-                    System.out.println(e.getMessage());
-                }
-            }
-            isAded = false;
+        for (Ship ship : generator) {
+            addShip(ship, repository, reader);
         }
         return repository;
     }
-    @SneakyThrows
-    private Ship generateFourDeckShip(GeneratorService generator, BufferedReader reader){
-        System.out.println("Let's generate FourDecker. Write where you want to place it \"A1 A4\" \"A1 D1\"");
-        String UsRequest = reader.readLine();
-        return generator.generateFourDeckShip(UsRequest);
-    }
-    @SneakyThrows
-    private Ship generateThreeDeckShip(GeneratorService generator, BufferedReader reader){
-        System.out.println("Let's generate ThreeDecker. Write where you want to place it \"A1 A3\" \"A1 C1\"");
-        String UsRequest = reader.readLine();
-        return generator.generateThreeDeckShip(UsRequest);
-    }
-    @SneakyThrows
-    private Ship generateTwoDeckShip(GeneratorService generator, BufferedReader reader){
-        System.out.println("Let's generate TwoDecker. Write where you want to place it \"A1 A2\" \"A1 B1\"");
-        String UsRequest = reader.readLine();
-        return generator.generateTwoDeckShip(UsRequest);
-    }
-    @SneakyThrows
-    private Ship generateOneDeckShip(GeneratorService generator, BufferedReader reader){
-        System.out.println("Let's generate OneDecker. Write where you want to place it \"A1\" \"J9\"");
-        String UsRequest = reader.readLine();
-        return generator.generateOneDeckShip(UsRequest);
-    }
-    private void chooseRegime(BufferedReader reader){
-        boolean isAllrite = false;
-        while (!isAllrite){
+
+    private void addShip(Ship ship, ShipsRepository repository, BufferedReader reader) {
+        boolean isLocated = false;
+        while (!isLocated) {
+            System.out.println(getClassName(ship.getClass()) + " is Creating");
+            if (ship.getClass().equals(OneDeckShip.class)) {
+                System.out.println("Please write the coordinates in format \"A1\"");
+            } else {
+                System.out.println("\"Please write the coordinates in format \"A1 A3\"");
+            }
             try {
-                String result = reader.readLine();
-                playerTwo = getPlayerTwo(result);
-                System.out.println("You choosed " + result + " regime");
-                isAllrite = true;
+                Coordinate coordinate = new Coordinate(reader.readLine());
+                ship.setShipCoords(coordinate);
+                System.out.println(repository.addShip(ship));
+                isLocated = true;
+            } catch (IncorrectRequestException e) {
+                System.out.println(e.getMessage());
             } catch (IOException e) {
                 e.printStackTrace();
-            } catch (IncorrectRequestException ex){
-                System.out.println(ex.getMessage());
             }
         }
     }
-    private String chooseName(BufferedReader reader){
+    private String getClassName(Class c){
+        String fullName = c.getName();
+        int index = fullName.lastIndexOf(".") + 1;
+        return fullName.substring(index);
+    }
+
+    private String chooseRegime(BufferedReader reader) {
+        System.out.println("Choose regime 1player/2players");
         boolean isAllrite = false;
+        String result = "";
+        while (!isAllrite) {
+            try {
+                result = reader.readLine();
+                playerTwo = getPlayerTwo(result);
+                isAllrite = true;
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (IncorrectRequestException ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+        return "You choosed " + result + " regime";
+    }
+
+    private String chooseName(BufferedReader reader) {
+        boolean isAlright = false;
         String name = null;
-        while (!isAllrite){
+        while (!isAlright) {
             try {
                 System.out.println("Write your name");
                 name = reader.readLine();
-                if (!name.equals("") && name.equals("Skynet")){
+                if (!name.equals("") && name.equals("Skynet")) {
                     System.out.println("You can't take this name. Only me can be Skynet");
-                } else if (!name.equals("")){
-                    isAllrite = true;
+                } else if (!name.equals("")) {
+                    isAlright = true;
                 }
             } catch (IOException e) {
                 e.printStackTrace();
-            } catch (IncorrectRequestException ex){
+            } catch (IncorrectRequestException ex) {
                 System.out.println(ex.getMessage());
             }
         }
         return name;
     }
-    private Player getPlayerTwo (String result){
 
-        final String onePlayer = "1player";
-        final String twoPlayers = "2players";
-        switch (result){
-            case onePlayer:
+    private Player getPlayerTwo(String result) {
+
+        switch (result) {
+            case "1player":
                 return new Computer();
-            case twoPlayers:
+            case "2players":
                 return new User();
             default:
                 throw new IncorrectRequestException(result + " there is not such regime!");
         }
     }
-    public static void main(String[] args) {
-        Thread t = new Thread(new SeaBattleAp());
-        t.start();
-    }
+
 }

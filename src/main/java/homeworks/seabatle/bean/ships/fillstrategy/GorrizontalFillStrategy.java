@@ -1,6 +1,8 @@
 package homeworks.seabatle.bean.ships.fillstrategy;
 
-public class GorrizontalFillStrategy implements FillStrategy{
+import homeworks.seabatle.bean.ships.fillstrategy.strategyinterface.FillStrategy;
+
+public class GorrizontalFillStrategy implements FillStrategy {
     @Override
     public int[] getShipCoords(int firstCell, int length) {
         int[] coords = new int[length];

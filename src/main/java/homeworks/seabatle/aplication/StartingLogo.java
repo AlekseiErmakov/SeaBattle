@@ -9,7 +9,7 @@ public class StartingLogo implements Runnable,Dialog{
         printInformation(UPDATINGDRIVERS);
         printInformation(CONFIGURATINGSYSTEM);
         printTitle();
-        System.out.println(CHOOSEREGIME);
+
     }
     @SneakyThrows
     private void printCompany(){
