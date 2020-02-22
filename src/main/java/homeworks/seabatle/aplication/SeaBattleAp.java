@@ -1,28 +1,32 @@
 package homeworks.seabatle.aplication;
 
 
-import homeworks.seabatle.bean.coordinates.Coordinate;
-import homeworks.seabatle.bean.field.Field;
-import homeworks.seabatle.bean.field.StrikeResult;
-import homeworks.seabatle.bean.players.Computer;
-import homeworks.seabatle.bean.players.Player;
-import homeworks.seabatle.bean.players.User;
-import homeworks.seabatle.bean.ships.OneDeckShip;
-import homeworks.seabatle.bean.ships.Ship;
-import homeworks.seabatle.bean.ships.repository.PlayerShipsRepository;
-import homeworks.seabatle.bean.ships.repository.ShipsRepository;
+import homeworks.seabatle.ship.Ship;
+import homeworks.seabatle.servises.shipfactory.ShipFactory;
+import homeworks.seabatle.ship.ShipType;
+import homeworks.seabatle.board.field.Field;
+import homeworks.seabatle.board.field.StrikeResult;
+import homeworks.seabatle.players.Computer;
+import homeworks.seabatle.players.Player;
+import homeworks.seabatle.players.User;
+
+import homeworks.seabatle.board.field.repository.PlayerShipsRepository;
+import homeworks.seabatle.board.field.repository.ShipsRepository;
 import homeworks.seabatle.board.GameBoard;
 import homeworks.seabatle.exception.IncorrectRequestException;
-import homeworks.seabatle.exception.parser.IncorrectInputParseExeption;
 import homeworks.seabatle.exception.shoot.IncorrectShootRequestException;
 
-import homeworks.seabatle.generator.shipgenerator.ShipGenerator;
+import homeworks.seabatle.servises.coordinates.LocationService;
+import homeworks.seabatle.servises.coordinates.LocationServiceImpl;
+import homeworks.seabatle.servises.generator.ShipAutoGenerator;
+
 import lombok.SneakyThrows;
 import lombok.ToString;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+
 @ToString
 public class SeaBattleAp implements MyAplication {
     private Player playerOne;
@@ -71,14 +75,15 @@ public class SeaBattleAp implements MyAplication {
     }
 
     private String runBattle(BufferedReader reader) {
-        boolean isRun = true;
+        boolean pOneWin = false;
+        boolean pTwoWin = false;
         String result = "Game Over";
-        while (isRun) {
-            isRun = shoot(playerOne, playerTwo, reader);
-            if (!isRun) {
-                break;
+        while (!pOneWin || !pTwoWin) {
+            pOneWin = shoot(playerOne, playerTwo, reader);
+
+            if (!pOneWin){
+                pTwoWin = shoot(playerTwo, playerOne, reader);
             }
-            isRun = shoot(playerTwo, playerOne, reader);
         }
         return result;
     }
@@ -97,41 +102,43 @@ public class SeaBattleAp implements MyAplication {
                 System.out.println(e.getMessage());
             }
         }
-        return !strikeResult1.equals(StrikeResult.LOSE);
+        return strikeResult1.equals(StrikeResult.LOSE);
     }
 
     private ShipsRepository generateField(Player player, BufferedReader reader) {
         ShipsRepository repository;
         System.out.println(String.format("%s now let's generate your field", player.getName()));
-        if (player instanceof Computer) {
-            repository = getRepository(new ShipGenerator(), reader);
-            return repository;
-        } else {
-            repository = getRepository(new ShipGenerator(), reader);
-            return repository;
-        }
+        repository = new ShipAutoGenerator().getGeneratedRepository();
+        return repository;
+//        if (player instanceof Computer) {
+//            repository = new ShipAutoGenerator().getGeneratedRepository();
+//            return repository;
+//        } else {
+//            repository = new ShipAutoGenerator().getGeneratedRepository();
+//            return repository;
+//        }
     }
 
-    private ShipsRepository getRepository(ShipGenerator generator, BufferedReader reader) {
+
+    private ShipsRepository getRepository(BufferedReader reader) {
         ShipsRepository repository = new PlayerShipsRepository();
-        for (Ship ship : generator) {
-            addShip(ship, repository, reader);
+        for (ShipType type : ShipType.values()) {
+            for (int i = 0; i < type.ordinal()+1; i++){
+                addShip(type, repository, reader);
+            }
+
         }
         return repository;
     }
-
-    private void addShip(Ship ship, ShipsRepository repository, BufferedReader reader) {
+    private void addShip(ShipType type, ShipsRepository repository, BufferedReader reader) {
         boolean isLocated = false;
+        ShipFactory factory = new ShipFactory();
+        Ship ship = factory.getShip(type);
         while (!isLocated) {
-            System.out.println(getClassName(ship.getClass()) + " is Creating");
-            if (ship.getClass().equals(OneDeckShip.class)) {
-                System.out.println("Please write the coordinates in format \"A1\"");
-            } else {
-                System.out.println("\"Please write the coordinates in format \"A1 A3\"");
-            }
+            printShipAdvice(type);
             try {
-                Coordinate coordinate = new Coordinate(reader.readLine());
-                ship.setShipCoords(coordinate);
+                LocationService service = new LocationServiceImpl();
+                ship.setCoords(service.getCoordinates(reader.readLine()));
                 System.out.println(repository.addShip(ship));
                 isLocated = true;
             } catch (IncorrectRequestException e) {
@@ -141,10 +148,13 @@ public class SeaBattleAp implements MyAplication {
             }
         }
     }
-    private String getClassName(Class c){
-        String fullName = c.getName();
-        int index = fullName.lastIndexOf(".") + 1;
-        return fullName.substring(index);
+    private void printShipAdvice(ShipType type){
+        System.out.println(type + " is Creating");
+        if (ShipType.BOAT.equals(type)) {
+            System.out.println("Please write the coordinates in format \"A1\"");
+        } else {
+            System.out.println("\"Please write the coordinates in format \"A1 A3\"");
+        }
     }
 
     private String chooseRegime(BufferedReader reader) {
@@ -187,7 +197,6 @@ public class SeaBattleAp implements MyAplication {
     }
 
     private Player getPlayerTwo(String result) {
-
         switch (result) {
             case "1player":
                 return new Computer();

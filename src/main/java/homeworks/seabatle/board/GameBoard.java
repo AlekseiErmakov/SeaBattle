@@ -1,16 +1,16 @@
 package homeworks.seabatle.board;
 
-import homeworks.seabatle.bean.field.Field;
-import homeworks.seabatle.bean.field.StrikeResult;
-import homeworks.seabatle.bean.players.Player;
+import homeworks.seabatle.board.field.Field;
+import homeworks.seabatle.board.field.StrikeResult;
+import homeworks.seabatle.players.Player;
 import homeworks.seabatle.exception.shoot.IncorrectShootRequestException;
+import homeworks.seabatle.servises.coordinates.LocationService;
 
-import java.util.Arrays;
-import java.util.List;
 
 public class GameBoard {
     private Player playerOne;
     private Player playerTwo;
+    LocationService service;
 
     public GameBoard(Player playerOne, Player playerTwo) {
         this.playerOne = playerOne;
@@ -20,9 +20,8 @@ public class GameBoard {
     public StrikeResult getPlayerStrikeResult(String request, Player player) {
         Field playerField = player.getField();
         if (request.length() == 2) {
-            int x = checkInt(request.replaceAll("[A-Z]", ""));
-            int y = yCoordInterpritator(request.substring(0, 1));
-            StrikeResult result = playerField.getStrikeRes(x, y);
+            int coord = service.getCoordinates(request)[0];
+            StrikeResult result = playerField.getStrikeRes(coord);
             return result;
         } else {
             throw new IncorrectShootRequestException(request);
@@ -35,20 +34,4 @@ public class GameBoard {
         System.out.println(playerTwo.getField().print());
     }
 
-    private int yCoordInterpritator(String yCoord) {
-        List<String> stringCoords = Arrays.asList("A", "B", "C", "D", "E", "F", "G", "H", "I", "J");
-        if (stringCoords.contains(yCoord)) {
-            return stringCoords.indexOf(yCoord);
-        }
-        throw new IncorrectShootRequestException(yCoord);
-    }
-
-    private int checkInt(String xCoord) {
-        try {
-            int x = Integer.valueOf(xCoord);
-            return x;
-        } catch (NumberFormatException e) {
-            throw new IncorrectShootRequestException(xCoord);
-        }
-    }
 }
