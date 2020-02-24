@@ -1,6 +1,8 @@
 package homeworks.seabatle.servises.generator.geninteface;
 
 
-public interface Generator<T> {
-    T next();
+import homeworks.seabatle.board.field.repository.ShipsRepository;
+
+public interface Generator {
+   ShipsRepository getGeneratedRepository();
 }

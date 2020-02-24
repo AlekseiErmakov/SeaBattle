@@ -5,13 +5,15 @@ import homeworks.seabatle.exception.ship.ShipCreationRequestExeption;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 
 public class LocationServiceImplTest {
     private LocationService service;
     private String req1 = "C4";
     private String req2 = "C4 C7";
-    private String req3 = "C4 D4";
+    private String req3 = "C4 F4";
     private String req4 = "C4 dq";
     private String req5 = "qwe";
     private String req6 = "";
@@ -28,9 +30,10 @@ public class LocationServiceImplTest {
     public void testGetCoordinates() {
         int[] expected1 = {23};
         int[] expected2 = {23,24,25,26};
-        int[] expected3 = {23,33};
+        int[] expected3 = {23,33,43,53};
 
         assertArrayEquals(expected1,service.getCoordinates(req1));
+        System.out.println(Arrays.toString(service.getCoordinates(req2)));
         assertArrayEquals(expected2,service.getCoordinates(req2));
         assertArrayEquals(expected3,service.getCoordinates(req3));
     }

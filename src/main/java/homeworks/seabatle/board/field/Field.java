@@ -5,6 +5,8 @@ import homeworks.seabatle.board.field.repository.ShipsRepository;
 import homeworks.seabatle.ship.Ship;
 
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 public class Field {
     private String[][] matrix;
@@ -23,8 +25,8 @@ public class Field {
     }
 
     public StrikeResult getStrikeRes(int coordinate) {
-        int x = getX(coordinate);
-        int y = getY(coordinate);
+        int x = coordinate/10;
+        int y = coordinate%10;
         String square = matrix[x][y];
         switchChar(x, y);
         if (square.equals(deck)) {
