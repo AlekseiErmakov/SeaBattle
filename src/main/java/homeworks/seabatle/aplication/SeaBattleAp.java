@@ -31,8 +31,9 @@ import java.io.InputStreamReader;
 public class SeaBattleAp implements MyAplication {
     private Player playerOne;
     private Player playerTwo;
-    GameBoard gameBoard;
-
+    private GameBoard gameBoard;
+    private static final String AUTO = "auto";
+    private static final String MANUAL = "manual";
     StartingLogo log = new StartingLogo();
     Thread logoThread = new Thread(log);
 
@@ -77,13 +78,11 @@ public class SeaBattleAp implements MyAplication {
     private String runBattle(BufferedReader reader) {
         boolean pOneWin = false;
         boolean pTwoWin = false;
-        String result = "Game Over";
         while (!pOneWin && !pTwoWin) {
             pOneWin = shoot(playerOne, playerTwo, reader);
             if (!pOneWin){
                 pTwoWin = shoot(playerTwo, playerOne, reader);
             }
-
         }
         if (pOneWin){
             return declareRsult(playerOne.getName());
@@ -119,7 +118,8 @@ public class SeaBattleAp implements MyAplication {
                     System.out.println(strikeResult1.getDescription());
                 }
                 gameBoard.printBatlefield();
-                if (strikeResult1.equals(StrikeResult.WOUND)){
+                if (strikeResult1.equals(StrikeResult.WOUND) || strikeResult1.equals(StrikeResult.KILL)
+                        || strikeResult1.equals(StrikeResult.SHOOT) ){
                     shooting = true;
                 }else {
                     shooting = false;
@@ -134,15 +134,14 @@ public class SeaBattleAp implements MyAplication {
     private ShipsRepository generateField(Player player, BufferedReader reader) {
         ShipsRepository repository;
         System.out.println(String.format("%s now let's generate your field", player.getName()));
-        repository = new ShipAutoGenerator().getGeneratedRepository();
+        ShipAutoGenerator generator = new ShipAutoGenerator();
+        String regime = chooseGenerateType(reader);
+        if (player instanceof Computer || regime.equals(AUTO)) {
+            repository = generator.getGeneratedRepository();
+        } else {
+           repository = getRepository(reader);
+        }
         return repository;
-//        if (player instanceof Computer) {
-//            repository = new ShipAutoGenerator().getGeneratedRepository();
-//            return repository;
-//        } else {
-//            repository = new ShipAutoGenerator().getGeneratedRepository();
-//            return repository;
-//        }
     }
 
 
@@ -199,6 +198,23 @@ public class SeaBattleAp implements MyAplication {
             }
         }
         return "You choosed " + result + " regime";
+    }
+    private String chooseGenerateType(BufferedReader reader){
+        System.out.println("Choose generator regime auto/manual");
+        boolean isAllrite = false;
+        String regime = "";
+        while (!isAllrite) {
+            try {
+                regime = reader.readLine();
+                if (regime.equals(AUTO) || regime.equals(MANUAL)){
+                    isAllrite = true;
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("You chose " + regime + " regime");
+        return regime;
     }
 
     private String chooseName(BufferedReader reader) {

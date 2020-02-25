@@ -10,7 +10,7 @@ import java.util.List;
 
 public class PlayerShipsRepository implements ShipsRepository {
     private List<Ship> ships;
-    private static final String SUCCESS = "Ship successfully added!";
+    private static final String SUCCESS = " successfully added!";
 
     public PlayerShipsRepository() {
         ships = new LinkedList<>();
@@ -36,7 +36,7 @@ public class PlayerShipsRepository implements ShipsRepository {
             }
         }
         ships.add(ship);
-        return SUCCESS;
+        return ship.getType() + SUCCESS ;
     }
 
     @Override
@@ -64,15 +64,16 @@ public class PlayerShipsRepository implements ShipsRepository {
 
     @Override
     public void delete(Ship ship) {
-        int index = -1;
-        for (Ship inListShip : ships) {
-            if (inListShip.getId() == ship.getId()) {
-                index = ships.indexOf(inListShip);
-            }
-        }
-        if (index != -1) {
-            ships.remove(index);
-        }
+//        int index = -1;
+//        for (Ship inListShip : ships) {
+//            if (inListShip.getId() == ship.getId()) {
+//                index = ships.indexOf(inListShip);
+//            }
+//        }
+//        if (index != -1) {
+//            ships.remove(index);
+//        }
+        ships.remove(ship);
 
     }
 

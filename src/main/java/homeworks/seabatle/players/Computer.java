@@ -3,6 +3,7 @@ package homeworks.seabatle.players;
 
 import homeworks.seabatle.board.field.StrikeResult;
 import homeworks.seabatle.functional.AreaCreator;
+import homeworks.seabatle.servises.coordinates.ShipAreaCreator;
 import lombok.Data;
 import lombok.Getter;
 
@@ -19,29 +20,13 @@ public class Computer extends Player  {
     private List<Integer> ship;
     private boolean isWounded = false;
     private int currentTarget;
-    private AreaCreator crossCreator;
-    private AreaCreator diagonalCreator;
+    private ShipAreaCreator creator;
     private Random r;
     public Computer(){
         r = new Random();
         targets = getTargets();
         ship = new ArrayList<>();
-        crossCreator = (target)->{
-            List<Integer> targetList = new ArrayList<>();
-            targetList.add(target - 1);
-            targetList.add(target + 1);
-            targetList.add(target - 10);
-            targetList.add(target + 10);
-            return targetList;
-        };
-        diagonalCreator = (target)->{
-            List<Integer> targetList = new ArrayList<>();
-            targetList.add(target - 9);
-            targetList.add(target + 9);
-            targetList.add(target - 11);
-            targetList.add(target + 11);
-            return targetList;
-        };
+        creator = new ShipAreaCreator();
 
     }
 
@@ -108,7 +93,7 @@ public class Computer extends Player  {
     }
 
     private List<Integer> makeArea(int target){
-        return crossCreator.create(target);
+        return creator.getCrossArea(target);
     }
     private void updateTargets(Integer target){
         targets.remove(target);
@@ -116,8 +101,8 @@ public class Computer extends Player  {
     private void updateTargets(){
         List<Integer> tempCoordinates = new ArrayList<>();
         for (int coord : ship) {
-            tempCoordinates.addAll(crossCreator.create(coord));
-            tempCoordinates.addAll(diagonalCreator.create(coord));
+            tempCoordinates.addAll(creator.getCrossArea(coord));
+            tempCoordinates.addAll(creator.getDiagonalArea(coord));
         }
         updateTargets(tempCoordinates);
     }

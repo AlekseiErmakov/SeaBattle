@@ -2,23 +2,24 @@ package homeworks.seabatle.board.field;
 
 
 import homeworks.seabatle.board.field.repository.ShipsRepository;
+import homeworks.seabatle.functional.AreaCreator;
 import homeworks.seabatle.functional.StringMaker;
+import homeworks.seabatle.servises.coordinates.ShipAreaCreator;
 import homeworks.seabatle.ship.Ship;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
 import java.util.function.Function;
-import java.util.function.Supplier;
+
 
 public class Field {
     private ShipsRepository fleet;
     private String[][] matrix;
     private final static int BORDER = 10;
-    private final static String WATER = "*";
-    private final static String DECK = "D";
+    private final static String WATER = "~";
+    private final static String DECK = "@";
     private final static String KILLED = "X";
-    private final static String EMPTY = "E";
+    private final static String EMPTY = "*";
     private final static String[] letters = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
     private final static String[] indexis = {" ", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
     private Function<Integer, Integer> del;
@@ -95,8 +96,15 @@ public class Field {
     }
 
     private void updateField(int x, int y) {
-        String target = matrix[x][y];
-        matrix[x][y] = target.equals(DECK) ? KILLED : EMPTY;
+        if (isInRange(x, y)){
+            String target = matrix[x][y];
+            if (target.equals(DECK) || target.equals(KILLED)){
+                matrix[x][y] = KILLED;
+            } else {
+                matrix[x][y] = EMPTY;
+            }
+
+        }
     }
 
     private void createField() {
@@ -121,6 +129,7 @@ public class Field {
     }
 
     private StrikeResult getKilledResult(Ship ship) {
+        afterKillUpdate(ship.getCoords());
         fleet.delete(ship);
         if (fleet.getSize() > 0) {
             return StrikeResult.KILL;
@@ -134,6 +143,25 @@ public class Field {
         fleet.updateShip(ship);
         return StrikeResult.WOUND;
     }
+    private void afterKillUpdate(int [] coords){
+        List<Integer> area = new ArrayList<>();
+        ShipAreaCreator creator = new ShipAreaCreator();
+        for (int coord : coords){
+            area.addAll(creator.getCrossArea(coord));
+            area.addAll(creator.getDiagonalArea(coord));
+        }
+        afterKillUpdate(area);
 
+    }
+    private void afterKillUpdate(List<Integer> area){
+        for (int coord : area){
+            int x = del.apply(coord);
+            int y = rem.apply(coord);
+            updateField(x,y);
+        }
+    }
+    private boolean isInRange(int x, int y){
+        return 0 <= x && x <= 9 && 0 <= y && y <= 9;
+    }
 
 }
