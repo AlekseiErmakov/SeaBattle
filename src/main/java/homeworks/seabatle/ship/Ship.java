@@ -1,9 +1,8 @@
 package homeworks.seabatle.ship;
 
 
-import homeworks.seabatle.exception.ship.ShipCreationRequestExeption;
+import homeworks.seabatle.exception.ShipCreationRequestExeption;
 import lombok.Getter;
-import lombok.Setter;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package homeworks.seabatle.exception.ship;
+package homeworks.seabatle.exception;
 
 import homeworks.seabatle.exception.IncorrectRequestException;
 

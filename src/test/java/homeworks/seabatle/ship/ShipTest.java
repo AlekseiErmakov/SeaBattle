@@ -1,7 +1,6 @@
 package homeworks.seabatle.ship;
 
-import homeworks.seabatle.exception.ship.ShipCreationRequestExeption;
-import org.junit.Assert;
+import homeworks.seabatle.exception.ShipCreationRequestExeption;
 import org.junit.Before;
 import org.junit.Test;
 

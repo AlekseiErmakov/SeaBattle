@@ -2,22 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01a66ce3-84b7-489b-b958-931582558baf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/field/FieldExt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/Interpreter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/Strateg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/StringMaker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/functional/AreaCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/homeworks/seabatle/players/ComputerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/exception/IncorrectCreateShipRecuestException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/exception/IncorrectInputParseExeption.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/exception/IncorrectShootRequestException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/exception/ShipCreationRequestExeption.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/exception/ShipNotFoundExeption.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/functional/AreaCreator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/functional/Calculator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/functional/StringMaker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/players/Computer$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/homeworks/seabatle/players/ComputerTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/aplication/SeaBattleAp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/aplication/SeaBattleAp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/GameBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/field/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/field/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/field/FieldExt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/field/repository/PlayerShipsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/field/repository/PlayerShipsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/create/IncorrectCreateShipRecuestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/IncorrectCreateShipRecuestException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/parser/IncorrectInputParseExeption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/IncorrectInputParseExeption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/ship/ShipCreationRequestExeption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/ShipCreationRequestExeption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/ship/ShipNotFoundExeption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/ShipNotFoundExeption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/shoot/IncorrectShootRequestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/IncorrectShootRequestException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/players/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/players/Computer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/LocationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/LocationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/LocationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/LocationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/generator/ShipAutoGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/generator/ShipAutoGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/generator/geninteface/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/generator/geninteface/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/ship/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homeworks/seabatle/ship/Ship.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homeworks/seabatle/board/field/repository/PlayerShipsRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homeworks/seabatle/board/field/repository/PlayerShipsRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/homeworks/seabatle/servises/coordinates/LocationServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homeworks/seabatle/servises/coordinates/LocationServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homeworks/seabatle/ship/ShipTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homeworks/seabatle/ship/ShipTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/aplication/SeaBattleAp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/aplication/SeaBattleAp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/board/GameBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/board/GameBoard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/board/field/Field.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/board/field/Field.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/board/field/FieldExt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/board/field/repository/PlayerShipsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/board/field/repository/PlayerShipsRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/exception/create/IncorrectCreateShipRecuestException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/exception/parser/IncorrectInputParseExeption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/exception/ship/ShipCreationRequestExeption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/exception/ship/ShipNotFoundExeption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/exception/shoot/IncorrectShootRequestException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/players/Computer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/players/Computer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/servises/coordinates/Calculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/servises/coordinates/Interpreter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/servises/coordinates/LocationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/servises/coordinates/LocationService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/servises/coordinates/LocationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/servises/coordinates/LocationServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/servises/generator/ShipAutoGenerator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/servises/generator/ShipAutoGenerator$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/servises/coordinates/Strateg.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/servises/coordinates/StringMaker.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/servises/generator/ShipAutoGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/servises/generator/ShipAutoGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/servises/generator/geninteface/Generator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/servises/generator/geninteface/Generator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homeworks/seabatle/ship/Ship.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/homeworks/seabatle/ship/Ship.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/homeworks/seabatle/board/field/repository/PlayerShipsRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/homeworks/seabatle/board/field/repository/PlayerShipsRepositoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/homeworks/seabatle/servises/coordinates/LocationServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/homeworks/seabatle/servises/coordinates/LocationServiceImplTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/homeworks/seabatle/ship/ShipTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/homeworks/seabatle/ship/ShipTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,7 +65,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="134" />
+    <option name="myElementSize" value="148" />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
@@ -36,14 +73,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/field/FieldExt.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/aplication/SeaBattleAp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-610">
-              <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
+            <state relative-caret-position="255">
+              <caret line="116" column="60" selection-start-line="116" selection-start-column="60" selection-end-line="116" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2649#2650#0" expanded="true" />
-                <element signature="e#2684#2685#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -52,67 +87,90 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/LocationServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="48" column="59" lean-forward="true" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
+            <state relative-caret-position="240">
+              <caret line="44" column="37" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#675#676#0" expanded="true" />
-                <element signature="e#728#729#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/GameBoard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/homeworks/seabatle/players/ComputerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/shipfactory/ShipFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/homeworks/seabatle/servises/coordinates/LocationServiceImplTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/generator/ShipAutoGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="35" column="71" selection-start-line="35" selection-start-column="71" selection-end-line="35" selection-end-column="71" />
+            <state relative-caret-position="376">
+              <caret line="113" column="61" selection-start-line="113" selection-start-column="61" selection-end-line="113" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3822#3823#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/Calculator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/Interpreter.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/ship/ShipType.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+              <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/StringMaker.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/ship/Ship.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+            <state relative-caret-position="246">
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/generator/geninteface/AutoGenerator.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/field/repository/PlayerShipsRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/generator/geninteface/Generator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            <state relative-caret-position="17">
+              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,17 +178,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/LocationService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="15" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/Strateg.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+            <state relative-caret-position="68">
+              <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -141,9 +190,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="JUnit4 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -153,19 +202,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/ships/TwoDeckShip.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/ships/FourDeckShip.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/ships/OneDeckShip.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/ships/ThreeDeckShip.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/players/Computer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/generator/shipgenerator/ShipAutoGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/ships/repository/PlayerShipsRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/bean/ships/Ship.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/Coordinate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/pojo/ships/ext/LocationServise.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/LocationServise.java" />
-        <option value="$PROJECT_DIR$/src/test/java/homeworks/seabatle/servises/coordinates/LocationServiseImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/LocationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/LocationServiseImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/generator/shipgenerator/ShipGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/pojo/ships/ext/boat.java" />
@@ -180,7 +216,6 @@
         <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/factory/ShipFabric.java" />
         <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/factory/ShipFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/ship/ShipType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/aplication/SeaBattleAp.java" />
         <option value="$PROJECT_DIR$/src/test/java/homeworks/seabatle/servises/shipfactory/ShipFactoryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/field/repository/ShipsRepository.java" />
         <option value="$PROJECT_DIR$/src/test/java/homeworks/seabatle/board/field/repository/PlayerShipsRepositoryTest.java" />
@@ -189,7 +224,6 @@
         <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/shipfactory/ShipFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/ship/Ship.java" />
         <option value="$PROJECT_DIR$/src/test/java/homeworks/seabatle/servises/generator/shipgenerator/ShipAutoGeneratorTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/GameBoard.java" />
         <option value="$PROJECT_DIR$/src/test/java/homeworks/seabatle/ship/ShipTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/generator/geninteface/Generator.java" />
         <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/generator/ShipAutoGenerator.java" />
@@ -198,12 +232,27 @@
         <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/StringCleaner.java" />
         <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/StringMaker.java" />
         <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/Calculator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/field/Field.java" />
         <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/Separator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/Interpreter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/field/FieldExt.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/LocationServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/homeworks/seabatle/servises/coordinates/LocationServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/functional/Calculator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/functional/StringMaker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/Interpreter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/IncorrectCreateShipRecuestException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/IncorrectInputParseExeption.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/ship/IncorrectShootRequestException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/IncorrectShootRequestException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/ShipCreationRequestExeption.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/ShipNotFoundExeption.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/functional/AreaCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/field/FieldExt.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/players/ComputerExt.java" />
+        <option value="$PROJECT_DIR$/src/test/java/homeworks/seabatle/players/ComputerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/players/Computer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/aplication/SeaBattleAp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/LocationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/field/Field.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/LocationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/GameBoard.java" />
       </list>
     </option>
   </component>
@@ -319,6 +368,26 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="homeworks" type="462c0819:PsiDirectoryNode" />
               <item name="seabatle" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seaBatle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seaBatle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="homeworks" type="462c0819:PsiDirectoryNode" />
+              <item name="seabatle" type="462c0819:PsiDirectoryNode" />
+              <item name="functional" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seaBatle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seaBatle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="homeworks" type="462c0819:PsiDirectoryNode" />
+              <item name="seabatle" type="462c0819:PsiDirectoryNode" />
               <item name="players" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -385,18 +454,6 @@
               <item name="homeworks" type="462c0819:PsiDirectoryNode" />
               <item name="seabatle" type="462c0819:PsiDirectoryNode" />
               <item name="servises" type="462c0819:PsiDirectoryNode" />
-              <item name="generator" type="462c0819:PsiDirectoryNode" />
-              <item name="geninteface" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="seaBatle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="seaBatle" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="homeworks" type="462c0819:PsiDirectoryNode" />
-              <item name="seabatle" type="462c0819:PsiDirectoryNode" />
-              <item name="servises" type="462c0819:PsiDirectoryNode" />
               <item name="shipfactory" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -438,6 +495,49 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="homeworks" type="462c0819:PsiDirectoryNode" />
               <item name="seabatle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seaBatle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seaBatle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="homeworks" type="462c0819:PsiDirectoryNode" />
+              <item name="seabatle" type="462c0819:PsiDirectoryNode" />
+              <item name="board" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seaBatle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seaBatle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="homeworks" type="462c0819:PsiDirectoryNode" />
+              <item name="seabatle" type="462c0819:PsiDirectoryNode" />
+              <item name="board" type="462c0819:PsiDirectoryNode" />
+              <item name="field" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seaBatle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seaBatle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="homeworks" type="462c0819:PsiDirectoryNode" />
+              <item name="seabatle" type="462c0819:PsiDirectoryNode" />
+              <item name="board" type="462c0819:PsiDirectoryNode" />
+              <item name="field" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seaBatle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seaBatle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="homeworks" type="462c0819:PsiDirectoryNode" />
+              <item name="seabatle" type="462c0819:PsiDirectoryNode" />
+              <item name="players" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="seaBatle" type="b2602c69:ProjectViewProjectNode" />
@@ -611,7 +711,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../corpmyTestBot" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -621,11 +721,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="homeworks.seabatle.players" />
       <recent name="homeworks.seabatle.ship" />
       <recent name="homeworks.seabatle.board.field.repository" />
       <recent name="homeworks.seabatle.servises.shipfactory" />
       <recent name="homeworks.seabatle.servises.generator.shipgenerator" />
-      <recent name="homeworks.seabatle.servises.coordinates" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="homeworks.seabatle.servises.generator" />
@@ -651,20 +751,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in seaBatle">
-    <configuration name="FieldExt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homeworks.seabatle.board.field.FieldExt" />
-      <module name="seaBatle" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="homeworks.seabatle.board.field.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="homeworks.seabatle.Main" />
       <module name="seaBatle" />
@@ -686,44 +773,60 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShipAutoGeneratorTest.testGetGeneratedRepository" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ComputerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seaBatle" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homeworks.seabatle.servises.generator.shipgenerator.*" />
+          <option name="PATTERN" value="homeworks.seabatle.players.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="homeworks.seabatle.servises.generator.shipgenerator" />
-      <option name="MAIN_CLASS_NAME" value="homeworks.seabatle.servises.generator.shipgenerator.ShipAutoGeneratorTest" />
-      <option name="METHOD_NAME" value="testGetGeneratedRepository" />
+      <option name="PACKAGE_NAME" value="homeworks.seabatle.players" />
+      <option name="MAIN_CLASS_NAME" value="homeworks.seabatle.players.ComputerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComputerTest.testAreaShoot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seaBatle" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homeworks.seabatle.players.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="homeworks.seabatle.players" />
+      <option name="MAIN_CLASS_NAME" value="homeworks.seabatle.players.ComputerTest" />
+      <option name="METHOD_NAME" value="testAreaShoot" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShipTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ComputerTest.testKillShoot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seaBatle" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homeworks.seabatle.ship.*" />
+          <option name="PATTERN" value="homeworks.seabatle.players.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="homeworks.seabatle.ship" />
-      <option name="MAIN_CLASS_NAME" value="homeworks.seabatle.ship.ShipTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="homeworks.seabatle.players" />
+      <option name="MAIN_CLASS_NAME" value="homeworks.seabatle.players.ComputerTest" />
+      <option name="METHOD_NAME" value="testKillShoot" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in seaBatle" />
-        <item itemvalue="Application.FieldExt" />
-        <item itemvalue="JUnit.ShipTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.ShipAutoGeneratorTest.testGetGeneratedRepository" />
+        <item itemvalue="JUnit.ComputerTest.testKillShoot" />
+        <item itemvalue="JUnit.ComputerTest" />
+        <item itemvalue="JUnit.ComputerTest.testAreaShoot" />
+        <item itemvalue="JUnit.All in seaBatle" />
       </list>
     </recent_temporary>
   </component>
@@ -748,44 +851,46 @@
       <workItem from="1582364526095" duration="36644000" />
       <workItem from="1582448976654" duration="2600000" />
       <workItem from="1582474800221" duration="4354000" />
-      <workItem from="1582539272921" duration="16566000" />
+      <workItem from="1582539272921" duration="21151000" />
+      <workItem from="1582570492294" duration="4304000" />
+      <workItem from="1582616532059" duration="15230000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ShipAutoGeneratorTest_testGetGeneratedRepository - 2020.02.22 at 22h 34m 46s.xml">
-      <configuration name="ShipAutoGeneratorTest.testGetGeneratedRepository" configurationId="JUnit" />
+    <history-entry file="ComputerTest_testKillShoot - 2020.02.25 at 13h 46m 21s.xml">
+      <configuration name="ComputerTest.testKillShoot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShipTest - 2020.02.22 at 22h 39m 50s.xml">
-      <configuration name="ShipTest" configurationId="JUnit" />
+    <history-entry file="ComputerTest_testKillShoot - 2020.02.25 at 13h 46m 27s.xml">
+      <configuration name="ComputerTest.testKillShoot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShipTest - 2020.02.22 at 22h 40m 23s.xml">
-      <configuration name="ShipTest" configurationId="JUnit" />
+    <history-entry file="ComputerTest_testKillShoot - 2020.02.25 at 13h 46m 36s.xml">
+      <configuration name="ComputerTest.testKillShoot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShipTest - 2020.02.22 at 22h 42m 16s.xml">
-      <configuration name="ShipTest" configurationId="JUnit" />
+    <history-entry file="ComputerTest_testKillShoot - 2020.02.25 at 13h 46m 41s.xml">
+      <configuration name="ComputerTest.testKillShoot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_seaBatle - 2020.02.22 at 22h 42m 51s.xml">
-      <configuration name="All in seaBatle" configurationId="JUnit" />
+    <history-entry file="ComputerTest_testKillShoot - 2020.02.25 at 13h 46m 50s.xml">
+      <configuration name="ComputerTest.testKillShoot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_seaBatle - 2020.02.22 at 22h 43m 20s.xml">
-      <configuration name="All in seaBatle" configurationId="JUnit" />
+    <history-entry file="ComputerTest_testKillShoot - 2020.02.25 at 13h 46m 51s.xml">
+      <configuration name="ComputerTest.testKillShoot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_seaBatle - 2020.02.23 at 00h 12m 56s.xml">
-      <configuration name="All in seaBatle" configurationId="JUnit" />
+    <history-entry file="ComputerTest_testKillShoot - 2020.02.25 at 13h 47m 35s.xml">
+      <configuration name="ComputerTest.testKillShoot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_seaBatle - 2020.02.24 at 18h 45m 11s.xml">
-      <configuration name="All in seaBatle" configurationId="JUnit" />
+    <history-entry file="ComputerTest_testKillShoot - 2020.02.25 at 13h 48m 13s.xml">
+      <configuration name="ComputerTest.testKillShoot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_seaBatle - 2020.02.24 at 18h 46m 28s.xml">
-      <configuration name="All in seaBatle" configurationId="JUnit" />
+    <history-entry file="ComputerTest_testKillShoot - 2020.02.25 at 13h 49m 10s.xml">
+      <configuration name="ComputerTest.testKillShoot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_seaBatle - 2020.02.24 at 18h 48m 56s.xml">
-      <configuration name="All in seaBatle" configurationId="JUnit" />
+    <history-entry file="ComputerTest_testKillShoot - 2020.02.25 at 13h 49m 52s.xml">
+      <configuration name="ComputerTest.testKillShoot" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136742000" />
+    <option name="totallyTimeSpent" value="160861000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -798,9 +903,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2771855" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2835821" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -808,11 +912,10 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="UI Designer" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Thumbnails" weight="0.32963374" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32963374" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3218646" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.41468927" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.41398445" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32963374" />
@@ -824,12 +927,13 @@
       <window_info anchor="bottom" id="SQL" order="12" weight="0.32963374" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32963374" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.31520534" />
+      <window_info anchor="bottom" id="Thumbnails" order="15" weight="0.32963374" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Coverage" order="5" side_tool="true" visible="true" weight="0.23720682" />
+      <window_info anchor="right" id="Coverage" order="5" side_tool="true" visible="true" weight="0.015991472" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
@@ -877,18 +981,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/aplication/SeaBattleAp.java</url>
-          <line>73</line>
-          <properties />
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/aplication/SeaBattleAp.java</url>
-          <line>70</line>
-          <properties />
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/homeworks/seabatle/servises/shipfactory/ShipFactoryTest.java</url>
           <line>18</line>
@@ -904,7 +996,7 @@
     <SUITE FILE_PATH="coverage/seaBatle$ShipAutoGeneratorTest.ic" NAME="ShipAutoGeneratorTest Coverage Results" MODIFIED="1582389192118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>homeworks.seabatle.servises.generator.shipgenerator.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/seaBatle$Main.ic" NAME="Main Coverage Results" MODIFIED="1582380622171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/seaBatle$Main.ic" NAME="Main Coverage Results" MODIFIED="1582618425071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>homeworks.seabatle.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/seaBatle$RequestParserTest_testIncorrectLengthDoubleCoord.ic" NAME="RequestParserTest.testIncorrectLengthDoubleCoord Coverage Results" MODIFIED="1581417116729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -940,66 +1032,10 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/pojo/ships/ShipOld.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="591" column="6" selection-start-line="591" selection-start-column="6" selection-end-line="591" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/pojo/ships/OneDeckShip.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/generator/shipgenerator/ShipGenerator.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/Coordinate.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/pojo/ships/FourDeckShip.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/homeworks/seabatle/pojo/ships/repository/PlayerShipsRepositoryTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/homeworks/seabatle/pojo/coordinates/CoordinateTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/homeworks/seabatle/pojo/field/FieldTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/players/Computer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/players/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/players/playerinteface/Shootable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/players/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
           <caret line="833" selection-start-line="833" selection-end-line="833" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/ship/ShipType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="38" lean-forward="true" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -1010,34 +1046,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Assert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#645#646#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/aplication/Dialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/aplication/MyAplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1047,68 +1059,6 @@
           <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/field/StrikeResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/aplication/StartingLogo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/aplication/SeaBattleAp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/GameBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/ship/Ship.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/homeworks/seabatle/ship/ShipTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
-            <element signature="e#1457#1458#0" expanded="true" />
-            <element signature="e#1504#1505#0" expanded="true" />
-            <element signature="e#1602#1603#0" expanded="true" />
-            <element signature="e#1649#1650#0" expanded="true" />
-            <element signature="e#1839#1840#0" expanded="true" />
-            <element signature="e#1900#1901#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1148,20 +1098,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/fillservise/GorrizontalFillStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/fillservise/VerticalFillStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/function/Predicate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
@@ -1176,56 +1112,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/shipfactory/ShipFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/generator/ShipAutoGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="96" column="42" selection-start-line="96" selection-start-column="42" selection-end-line="96" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#962#963#0" expanded="true" />
-            <element signature="e#1002#1003#0" expanded="true" />
-            <element signature="e#3772#3773#0" expanded="true" />
-            <element signature="e#3827#3828#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/field/repository/PlayerShipsRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="94" column="9" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1600#1601#0" expanded="true" />
-            <element signature="e#1635#1636#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/function/Supplier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/field/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="69" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1243,69 +1133,315 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/StringMaker.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/homeworks/seabatle/ship/ShipTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/Strateg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/Calculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/Interpreter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/LocationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="15" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/field/FieldExt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-610">
-          <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
+        <state relative-caret-position="501">
+          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2649#2650#0" expanded="true" />
-            <element signature="e#2684#2685#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/LocationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="48" column="59" lean-forward="true" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#675#676#0" expanded="true" />
-            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#659#660#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#1457#1458#0" expanded="true" />
+            <element signature="e#1504#1505#0" expanded="true" />
+            <element signature="e#1602#1603#0" expanded="true" />
+            <element signature="e#1649#1650#0" expanded="true" />
+            <element signature="e#1839#1840#0" expanded="true" />
+            <element signature="e#1900#1901#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/homeworks/seabatle/servises/coordinates/LocationServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="35" column="71" selection-start-line="35" selection-start-column="71" selection-end-line="35" selection-end-column="71" />
+        <state relative-caret-position="425">
+          <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/Strateg.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/functional/StringMaker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/Interpreter.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/functional/Calculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/players/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/functional/AreaCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="387" column="18" selection-start-line="387" selection-start-column="18" selection-end-line="387" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/field/FieldExt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="140" column="14" selection-start-line="140" selection-start-column="14" selection-end-line="140" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/IncorrectCreateShipRecuestException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/IncorrectInputParseExeption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/ShipNotFoundExeption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/field/StrikeResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/IncorrectRequestException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/IncorrectShootRequestException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/players/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/fillservise/GorrizontalFillStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/fillservise/VerticalFillStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/players/ComputerExt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-66">
+          <caret line="29" column="18" lean-forward="true" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1523#1524#0" expanded="true" />
+            <element signature="e#1551#1552#0" expanded="true" />
+            <element signature="e#1591#1592#0" expanded="true" />
+            <element signature="e#1618#1619#0" expanded="true" />
+            <element signature="e#1592#1593#0" expanded="true" />
+            <element signature="e#1611#1612#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#645#646#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/exception/ShipCreationRequestExeption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/players/Computer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3007#3008#0" expanded="true" />
+            <element signature="e#3057#3058#0" expanded="true" />
+            <element signature="e#3330#3331#0" expanded="true" />
+            <element signature="e#3368#3369#0" expanded="true" />
+            <element signature="e#3697#3698#0" expanded="true" />
+            <element signature="e#3715#3716#0" expanded="true" />
+            <element signature="e#3766#3767#0" expanded="true" />
+            <element signature="e#3785#3786#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/aplication/StartingLogo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/aplication/MyAplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/field/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="37" column="54" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/field/repository/PlayerShipsRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/LocationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="44" column="37" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/coordinates/LocationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/aplication/SeaBattleAp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="116" column="60" selection-start-line="116" selection-start-column="60" selection-end-line="116" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/board/GameBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/homeworks/seabatle/players/ComputerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/ship/ShipType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/ship/Ship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/shipfactory/ShipFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homeworks/seabatle/servises/generator/ShipAutoGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="113" column="61" selection-start-line="113" selection-start-column="61" selection-end-line="113" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3822#3823#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

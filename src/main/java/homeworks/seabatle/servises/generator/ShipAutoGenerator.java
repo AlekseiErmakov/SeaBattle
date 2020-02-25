@@ -1,7 +1,7 @@
 package homeworks.seabatle.servises.generator;
 
 import homeworks.seabatle.board.field.repository.PlayerShipsRepository;
-import homeworks.seabatle.exception.ship.ShipCreationRequestExeption;
+import homeworks.seabatle.exception.ShipCreationRequestExeption;
 import homeworks.seabatle.servises.generator.geninteface.Generator;
 import homeworks.seabatle.ship.Ship;
 import homeworks.seabatle.servises.shipfactory.ShipFactory;

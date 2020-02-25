@@ -1,7 +1,6 @@
 package homeworks.seabatle.servises.coordinates;
 
-import homeworks.seabatle.exception.parser.IncorrectInputParseExeption;
-import homeworks.seabatle.exception.ship.ShipCreationRequestExeption;
+import homeworks.seabatle.exception.IncorrectInputParseExeption;
 import org.junit.Before;
 import org.junit.Test;
 

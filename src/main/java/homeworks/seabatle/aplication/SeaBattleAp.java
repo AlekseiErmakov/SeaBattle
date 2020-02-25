@@ -14,7 +14,7 @@ import homeworks.seabatle.board.field.repository.PlayerShipsRepository;
 import homeworks.seabatle.board.field.repository.ShipsRepository;
 import homeworks.seabatle.board.GameBoard;
 import homeworks.seabatle.exception.IncorrectRequestException;
-import homeworks.seabatle.exception.shoot.IncorrectShootRequestException;
+import homeworks.seabatle.exception.IncorrectShootRequestException;
 
 import homeworks.seabatle.servises.coordinates.LocationService;
 import homeworks.seabatle.servises.coordinates.LocationServiceImpl;
@@ -50,7 +50,7 @@ public class SeaBattleAp implements MyAplication {
         //показываем игровое поле
         gameBoard.printBatlefield();
         //играем
-        runBattle(reader);
+        System.out.println(runBattle(reader));
     }
 
     private String nameUsers(BufferedReader reader) {
@@ -78,14 +78,28 @@ public class SeaBattleAp implements MyAplication {
         boolean pOneWin = false;
         boolean pTwoWin = false;
         String result = "Game Over";
-        while (!pOneWin || !pTwoWin) {
+        while (!pOneWin && !pTwoWin) {
             pOneWin = shoot(playerOne, playerTwo, reader);
-
             if (!pOneWin){
                 pTwoWin = shoot(playerTwo, playerOne, reader);
             }
+
         }
-        return result;
+        if (pOneWin){
+            return declareRsult(playerOne.getName());
+        }else {
+            return declareRsult(playerTwo.getName());
+        }
+    }
+    private String declareRsult(String name){
+        String result = "Game Over";
+        StringBuilder sb = new StringBuilder();
+        sb.append(result);
+        sb.append("\n");
+        sb.append(name);
+        sb.append(" ");
+        sb.append(" is a winner!!! Congratulations, admiral!");
+        return sb.toString();
     }
 
     @SneakyThrows
@@ -95,10 +109,22 @@ public class SeaBattleAp implements MyAplication {
         while (shooting) {
             System.out.println(shooter.getName() + " shooting");
             try {
-                strikeResult1 = gameBoard.getPlayerStrikeResult(reader.readLine(), defender);
-                System.out.println(strikeResult1.getDescription());
-                shooting = false;
-            } catch (IncorrectShootRequestException e) {
+                if (shooter instanceof User){
+                    strikeResult1 = gameBoard.getPlayerStrikeResult(reader.readLine(), defender);
+                    System.out.println(strikeResult1.getDescription());
+
+                } else {
+                    strikeResult1 = gameBoard.getPlayerStrikeResult(((Computer) shooter).shoot(), defender);
+                    ((Computer) shooter).notifyShootResult(strikeResult1);
+                    System.out.println(strikeResult1.getDescription());
+                }
+                gameBoard.printBatlefield();
+                if (strikeResult1.equals(StrikeResult.WOUND)){
+                    shooting = true;
+                }else {
+                    shooting = false;
+                }
+            } catch (IncorrectRequestException e) {
                 System.out.println(e.getMessage());
             }
         }

@@ -1,6 +1,6 @@
 package homeworks.seabatle.servises.coordinates;
 
-import homeworks.seabatle.exception.parser.IncorrectInputParseExeption;
+import homeworks.seabatle.exception.IncorrectInputParseExeption;
 import homeworks.seabatle.functional.Calculator;
 import homeworks.seabatle.functional.StringMaker;
 import homeworks.seabatle.servises.fillservise.GorrizontalFillStrategy;
@@ -35,11 +35,16 @@ public class LocationServiceImpl implements LocationService {
                 int y2 = checkInt(maker.make(coords[1]));
                 return getCoordinates(x1, y1, x2, y2);
             } else {
-                throw new IncorrectInputParseExeption(alert.make(request));
+                throw new IncorrectInputParseExeption(alert.make(request+"не тут"));
             }
         } else {
-            throw new IncorrectInputParseExeption(alert.make(request));
+            throw new IncorrectInputParseExeption(alert.make(request+"а тут"));
         }
+    }
+    public String translateRequest(int coord){
+        String x = strCoords.get(coord/10);
+        String y = String.valueOf(coord%10 + 1);
+        return x + y;
     }
 
     private int[] getCoordinates(int x, int y) {
@@ -71,7 +76,7 @@ public class LocationServiceImpl implements LocationService {
     private int checkInt(String request) {
         try {
             int coordinate = Integer.parseInt(request)-1;
-            if (MINC <= coordinate && coordinate <= XCONST) {
+            if (0 <= coordinate && coordinate <= 9) {
                 return coordinate;
             } else {
                 throw new IncorrectInputParseExeption(request + " should be from \"1\" to \"10\"");

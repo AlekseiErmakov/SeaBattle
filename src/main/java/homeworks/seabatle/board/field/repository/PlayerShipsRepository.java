@@ -1,8 +1,8 @@
 package homeworks.seabatle.board.field.repository;
 
 
-import homeworks.seabatle.exception.ship.ShipCreationRequestExeption;
-import homeworks.seabatle.exception.ship.ShipNotFoundExeption;
+import homeworks.seabatle.exception.ShipCreationRequestExeption;
+import homeworks.seabatle.exception.ShipNotFoundExeption;
 import homeworks.seabatle.ship.Ship;
 
 import java.util.LinkedList;
