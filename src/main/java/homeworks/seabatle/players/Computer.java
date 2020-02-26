@@ -2,23 +2,28 @@ package homeworks.seabatle.players;
 
 
 import homeworks.seabatle.board.field.StrikeResult;
-import homeworks.seabatle.functional.AreaCreator;
 import homeworks.seabatle.servises.coordinates.ShipAreaCreator;
 import lombok.Data;
 import lombok.Getter;
+import lombok.Setter;
+
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-@Data
+
 public class Computer extends Player  {
+    @Getter
     private String name = "Skynet";
     private List<Integer> targets;
     private List<Integer> targetArea;
+    @Getter
+    @Setter
     private List<Integer> ship;
     private boolean isWounded = false;
+    @Setter
     private int currentTarget;
     private ShipAreaCreator creator;
     private Random r;

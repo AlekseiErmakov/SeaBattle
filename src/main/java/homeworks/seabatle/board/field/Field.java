@@ -83,10 +83,18 @@ public class Field {
         updateField(x, y);
         if (square.equals(DECK)) {
             Ship ship = fleet.getShip(x*10+y);
-            if (ship.getLives() > 1) {
-                return getWoundResult(ship);
+            ship.decrementLives();
+            fleet.updateShip(ship);
+            if (ship.getLives() > 0) {
+                return StrikeResult.WOUND;
             } else {
-                return getKilledResult(ship);
+                fleet.delete(ship);
+                afterKillUpdate(ship.getCoords());
+                if (fleet.getSize() > 0){
+                    return StrikeResult.KILL;
+                } else {
+                    return StrikeResult.LOSE;
+                }
             }
         } else if (square.equals(KILLED) || square.equals(EMPTY)) {
             return StrikeResult.SHOOT;
@@ -98,7 +106,7 @@ public class Field {
     private void updateField(int x, int y) {
         if (isInRange(x, y)){
             String target = matrix[x][y];
-            if (target.equals(DECK) || target.equals(KILLED)){
+            if (target.equals(DECK)){
                 matrix[x][y] = KILLED;
             } else {
                 matrix[x][y] = EMPTY;
@@ -128,21 +136,6 @@ public class Field {
         matrix[x][y] = DECK;
     }
 
-    private StrikeResult getKilledResult(Ship ship) {
-        afterKillUpdate(ship.getCoords());
-        fleet.delete(ship);
-        if (fleet.getSize() > 0) {
-            return StrikeResult.KILL;
-        } else {
-            return StrikeResult.LOSE;
-        }
-    }
-
-    private StrikeResult getWoundResult(Ship ship) {
-        ship.decrementLives();
-        fleet.updateShip(ship);
-        return StrikeResult.WOUND;
-    }
     private void afterKillUpdate(int [] coords){
         List<Integer> area = new ArrayList<>();
         ShipAreaCreator creator = new ShipAreaCreator();
@@ -157,7 +150,16 @@ public class Field {
         for (int coord : area){
             int x = del.apply(coord);
             int y = rem.apply(coord);
-            updateField(x,y);
+            afterKillUpdate(x,y);
+        }
+    }
+    private void afterKillUpdate(int x, int y) {
+        if (isInRange(x, y)){
+            String target = matrix[x][y];
+            if (target.equals(WATER)){
+                matrix[x][y] = EMPTY;
+            }
+
         }
     }
     private boolean isInRange(int x, int y){

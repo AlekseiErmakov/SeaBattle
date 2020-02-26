@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 public class ComputerTest {
@@ -69,7 +70,22 @@ public class ComputerTest {
         computer.shoot();
     }
     @Test
-    public void notifyShootResult() {
+    public void testGetShip() {
+        List<Integer> coords = Arrays.asList(10,12,12,13);
+        computer.setShip(coords);
+        assertThat(coords,is(computer.getShip()));
+    }
+    @Test
+    public void testRecursion() {
+        computer.setCurrentTarget(26);
+        computer.notifyShootResult(StrikeResult.MISS);
+        computer.setCurrentTarget(37);
+        computer.notifyShootResult(StrikeResult.MISS);
+        computer.setCurrentTarget(35);
+        computer.notifyShootResult(StrikeResult.MISS);
+        List<Integer> coords = Arrays.asList(36);
+        computer.setShip(coords);
+        computer.shoot();
     }
 
 

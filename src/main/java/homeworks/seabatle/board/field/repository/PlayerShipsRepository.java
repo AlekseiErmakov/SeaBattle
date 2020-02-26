@@ -45,6 +45,7 @@ public class PlayerShipsRepository implements ShipsRepository {
         for (Ship inListShip : ships) {
             if (inListShip.getId() == ship.getId()) {
                 ind = ships.indexOf(inListShip);
+
             }
         }
         if (ind != -1) {
@@ -64,16 +65,8 @@ public class PlayerShipsRepository implements ShipsRepository {
 
     @Override
     public void delete(Ship ship) {
-//        int index = -1;
-//        for (Ship inListShip : ships) {
-//            if (inListShip.getId() == ship.getId()) {
-//                index = ships.indexOf(inListShip);
-//            }
-//        }
-//        if (index != -1) {
-//            ships.remove(index);
-//        }
         ships.remove(ship);
+
 
     }
 

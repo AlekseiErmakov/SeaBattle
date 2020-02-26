@@ -20,7 +20,7 @@ public class ShipAutoGeneratorTest {
 
     @Test
     public void testGetGeneratedRepository() {
-        for (int i = 0; i < 200000; i++){
+        for (int i = 0; i < 2000; i++){
             PlayerShipsRepository repository = generator.getGeneratedRepository();
             assertNotNull(repository);
             List<Ship> ships = repository.getAll();

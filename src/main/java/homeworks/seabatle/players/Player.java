@@ -8,5 +8,4 @@ import lombok.Data;
 public abstract class Player  {
     private Field field;
     private String name;
-
 }

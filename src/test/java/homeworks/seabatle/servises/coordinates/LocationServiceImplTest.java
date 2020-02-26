@@ -24,7 +24,18 @@ public class LocationServiceImplTest {
     public void setUp() throws Exception {
         service = new LocationServiceImpl();
     }
-
+    @Test
+    public void testTranslateRequest(){
+        String exp1 = "A1";
+        String exp2 = "E4";
+        String exp3 = "J10";
+        int req1 = 0;
+        int req2 = 43;
+        int req3 = 99;
+        assertEquals(exp1,service.translateRequest(req1));
+        assertEquals(exp2,service.translateRequest(req2));
+        assertEquals(exp3,service.translateRequest(req3));
+    }
     @Test
     public void testGetCoordinates() {
         int[] expected1 = {23};
@@ -60,4 +71,5 @@ public class LocationServiceImplTest {
     public void testGetFake6Coordinates() {
         service.getCoordinates(req9);
     }
+
 }

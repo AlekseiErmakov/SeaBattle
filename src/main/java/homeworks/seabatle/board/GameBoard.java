@@ -13,7 +13,7 @@ import java.util.List;
 public class GameBoard {
     private Player playerOne;
     private Player playerTwo;
-    LocationService service;
+    private LocationService service;
 
     public GameBoard(Player playerOne, Player playerTwo) {
         this.playerOne = playerOne;

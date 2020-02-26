@@ -24,7 +24,7 @@ public class PlayerShipsRepositoryTest {
     private int[] cCoords = {27,28,29};
     private int[] dCoords = {72,73};
     private int[] boatCoords = {9};
-    private static final String SUCCESS = "Ship successfully added!";
+    private static final String SUCCESS = " successfully added!";
     @Before
     public void setUp() throws Exception {
         repository = new PlayerShipsRepository();
@@ -47,10 +47,10 @@ public class PlayerShipsRepositoryTest {
     @Test
     public void testAddShip() {
 
-        assertEquals(SUCCESS,repository.addShip(batleShip));
-        assertEquals(SUCCESS,repository.addShip(cruiser));
-        assertEquals(SUCCESS,repository.addShip(destroyer));
-        assertEquals(SUCCESS,repository.addShip(boat));
+        assertEquals(batleShip.getType() + SUCCESS,repository.addShip(batleShip));
+        assertEquals(cruiser.getType() + SUCCESS,repository.addShip(cruiser));
+        assertEquals(destroyer.getType() + SUCCESS,repository.addShip(destroyer));
+        assertEquals(boat.getType() + SUCCESS,repository.addShip(boat));
     }
     @Test(expected = ShipCreationRequestExeption.class)
     public void testAddWrongCoordShip() {
@@ -87,7 +87,6 @@ public class PlayerShipsRepositoryTest {
     @Test(expected = ShipNotFoundExeption.class)
     public void testFakeGetShip() {
         repository.addShip(batleShip);
-
         repository.getShip(89);
     }
 

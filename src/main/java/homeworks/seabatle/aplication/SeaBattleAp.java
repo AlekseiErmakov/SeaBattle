@@ -80,17 +80,18 @@ public class SeaBattleAp implements MyAplication {
         boolean pTwoWin = false;
         while (!pOneWin && !pTwoWin) {
             pOneWin = shoot(playerOne, playerTwo, reader);
-            if (!pOneWin){
+            if (!pOneWin) {
                 pTwoWin = shoot(playerTwo, playerOne, reader);
             }
         }
-        if (pOneWin){
+        if (pOneWin) {
             return declareRsult(playerOne.getName());
-        }else {
+        } else {
             return declareRsult(playerTwo.getName());
         }
     }
-    private String declareRsult(String name){
+
+    private String declareRsult(String name) {
         String result = "Game Over";
         StringBuilder sb = new StringBuilder();
         sb.append(result);
@@ -108,7 +109,7 @@ public class SeaBattleAp implements MyAplication {
         while (shooting) {
             System.out.println(shooter.getName() + " shooting");
             try {
-                if (shooter instanceof User){
+                if (shooter instanceof User) {
                     strikeResult1 = gameBoard.getPlayerStrikeResult(reader.readLine(), defender);
                     System.out.println(strikeResult1.getDescription());
 
@@ -119,9 +120,9 @@ public class SeaBattleAp implements MyAplication {
                 }
                 gameBoard.printBatlefield();
                 if (strikeResult1.equals(StrikeResult.WOUND) || strikeResult1.equals(StrikeResult.KILL)
-                        || strikeResult1.equals(StrikeResult.SHOOT) ){
+                        || strikeResult1.equals(StrikeResult.SHOOT)) {
                     shooting = true;
-                }else {
+                } else {
                     shooting = false;
                 }
             } catch (IncorrectRequestException e) {
@@ -135,11 +136,15 @@ public class SeaBattleAp implements MyAplication {
         ShipsRepository repository;
         System.out.println(String.format("%s now let's generate your field", player.getName()));
         ShipAutoGenerator generator = new ShipAutoGenerator();
-        String regime = chooseGenerateType(reader);
-        if (player instanceof Computer || regime.equals(AUTO)) {
+        if (player instanceof Computer) {
             repository = generator.getGeneratedRepository();
         } else {
-           repository = getRepository(reader);
+            String regime = chooseGenerateType(reader);
+            if (regime.equals(AUTO)) {
+                repository = generator.getGeneratedRepository();
+            } else {
+                repository = getRepository(reader);
+            }
         }
         return repository;
     }
@@ -148,13 +153,14 @@ public class SeaBattleAp implements MyAplication {
     private ShipsRepository getRepository(BufferedReader reader) {
         ShipsRepository repository = new PlayerShipsRepository();
         for (ShipType type : ShipType.values()) {
-            for (int i = 0; i < type.ordinal()+1; i++){
+            for (int i = 0; i < type.ordinal() + 1; i++) {
                 addShip(type, repository, reader);
             }
 
         }
         return repository;
     }
+
     private void addShip(ShipType type, ShipsRepository repository, BufferedReader reader) {
         boolean isLocated = false;
         ShipFactory factory = new ShipFactory();
@@ -173,7 +179,8 @@ public class SeaBattleAp implements MyAplication {
             }
         }
     }
-    private void printShipAdvice(ShipType type){
+
+    private void printShipAdvice(ShipType type) {
         System.out.println(type + " is Creating");
         if (ShipType.BOAT.equals(type)) {
             System.out.println("Please write the coordinates in format \"A1\"");
@@ -199,14 +206,15 @@ public class SeaBattleAp implements MyAplication {
         }
         return "You choosed " + result + " regime";
     }
-    private String chooseGenerateType(BufferedReader reader){
+
+    private String chooseGenerateType(BufferedReader reader) {
         System.out.println("Choose generator regime auto/manual");
         boolean isAllrite = false;
         String regime = "";
         while (!isAllrite) {
             try {
                 regime = reader.readLine();
-                if (regime.equals(AUTO) || regime.equals(MANUAL)){
+                if (regime.equals(AUTO) || regime.equals(MANUAL)) {
                     isAllrite = true;
                 }
             } catch (IOException e) {
