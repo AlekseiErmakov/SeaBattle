@@ -2,26 +2,35 @@ package homeworks.seabatle.aplication;
 
 import lombok.SneakyThrows;
 
-public class StartingLogo implements Runnable,Dialog{
+public class StartingLogo implements Runnable{
+    String COMPANY = "Epam Education Java Core";
+    String UPDATINGDRIVERS = "Updating Drivers";
+    String CONFIGURATINGSYSTEM = "Configurating System";
+    String TITLE = "Sea Battle";
     @Override
     public void run() {
-        printCompany();
-        printInformation(UPDATINGDRIVERS);
-        printInformation(CONFIGURATINGSYSTEM);
-        printTitle();
+        try {
+            printCompany();
+            printInformation(UPDATINGDRIVERS);
+            printInformation(CONFIGURATINGSYSTEM);
+            printTitle();
+        } catch (InterruptedException ex){
+            ex.printStackTrace();
+        }
+
 
     }
-    @SneakyThrows
-    private void printCompany(){
+
+    private void printCompany() throws InterruptedException {
         for (int i = 0; i < COMPANY.length(); i++){
             System.out.print(COMPANY.charAt(i));
             Thread.sleep(100);
         }
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         System.out.println();
     }
-    @SneakyThrows
-    private void printInformation(String string){
+
+    private void printInformation(String string) throws InterruptedException {
         System.out.print(string);
         for (int i = 0; i < 8; i++){
             System.out.print(".");
@@ -29,8 +38,8 @@ public class StartingLogo implements Runnable,Dialog{
         }
         System.out.println();
     }
-    @SneakyThrows
-    private void printTitle(){
+
+    private void printTitle() throws InterruptedException {
         System.out.println(TITLE);
         Thread.sleep(1000);
     }

@@ -28,7 +28,6 @@ public class PlayerShipsRepository implements ShipsRepository {
 
     @Override
     public String addShip(Ship ship) {
-
         for (Ship inListShip : ships) {
             if (inShipZone(inListShip, ship)) {
                 throw new ShipCreationRequestExeption("You can't create ship here,there" +

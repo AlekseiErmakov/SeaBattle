@@ -12,14 +12,13 @@ import java.util.List;
 
 public class LocationServiceImpl implements LocationService {
     private static final List<String> strCoords = Arrays.asList("A", "B", "C", "D", "E", "F", "G", "H", "I", "J");
-    private static final int XCONST = 10;
-    private static final int MINC = 1;
+    private static final int XCONST = 10;;
     private Calculator calculator;
     public LocationServiceImpl(){
         calculator = (x, y) -> x * XCONST + y;
     }
     @Override
-    public int[] getCoordinates(String request) {
+    public int[] getCoordinates(String request) throws IncorrectInputParseExeption {
         StringMaker maker = string -> string.replaceAll("[A-Z]", "");
         StringMaker alert = string -> string + " is not valid";
         if (0 < request.length() && request.length() <= 3) {
@@ -35,12 +34,13 @@ public class LocationServiceImpl implements LocationService {
                 int y2 = checkInt(maker.make(coords[1]));
                 return getCoordinates(x1, y1, x2, y2);
             } else {
-                throw new IncorrectInputParseExeption(alert.make(request+"не тут"));
+                throw new IncorrectInputParseExeption(alert.make(request));
             }
         } else {
-            throw new IncorrectInputParseExeption(alert.make(request+"а тут"));
+            throw new IncorrectInputParseExeption(alert.make(request));
         }
     }
+    @Override
     public String translateRequest(int coord){
         String x = strCoords.get(coord/10);
         String y = String.valueOf(coord%10 + 1);
@@ -73,7 +73,7 @@ public class LocationServiceImpl implements LocationService {
     }
 
 
-    private int checkInt(String request) {
+    private int checkInt(String request) throws IncorrectInputParseExeption {
         try {
             int coordinate = Integer.parseInt(request)-1;
             if (0 <= coordinate && coordinate <= 9) {
@@ -86,7 +86,7 @@ public class LocationServiceImpl implements LocationService {
         }
     }
 
-    private int checkSrting(String request) {
+    private int checkSrting(String request) throws IncorrectInputParseExeption {
         if (strCoords.contains(request)) {
             return strCoords.indexOf(request);
         } else {

@@ -2,9 +2,8 @@ package homeworks.seabatle.board.field;
 
 
 import homeworks.seabatle.board.field.repository.ShipsRepository;
-import homeworks.seabatle.functional.AreaCreator;
 import homeworks.seabatle.functional.StringMaker;
-import homeworks.seabatle.servises.coordinates.ShipAreaCreator;
+import homeworks.seabatle.servises.coordinates.ShipAreaCreatorImpl;
 import homeworks.seabatle.ship.Ship;
 
 import java.util.ArrayList;
@@ -138,7 +137,7 @@ public class Field {
 
     private void afterKillUpdate(int [] coords){
         List<Integer> area = new ArrayList<>();
-        ShipAreaCreator creator = new ShipAreaCreator();
+        ShipAreaCreatorImpl creator = new ShipAreaCreatorImpl();
         for (int coord : coords){
             area.addAll(creator.getCrossArea(coord));
             area.addAll(creator.getDiagonalArea(coord));

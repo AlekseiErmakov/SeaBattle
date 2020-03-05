@@ -14,6 +14,7 @@ import homeworks.seabatle.servises.fillservise.stratinterface.FillStrategy;
 import java.util.Random;
 
 
+
 public class ShipAutoGenerator implements Generator {
 
     private static final int BOATBOUND = 100;
@@ -21,12 +22,9 @@ public class ShipAutoGenerator implements Generator {
     private static final int CRUISERLIVES = 3;
     private static final int BATTLESHIPLIVES = 4;
 
+
     @Override
     public PlayerShipsRepository getGeneratedRepository() {
-        return autoGenerateRep();
-    }
-
-    private PlayerShipsRepository autoGenerateRep() {
         PlayerShipsRepository repository = new PlayerShipsRepository();
         ShipFactory factory = new ShipFactory();
         for (ShipType type : ShipType.values()) {

@@ -65,6 +65,6 @@ public class GameBoardTest {
 
     @Test
     public void printBatlefield() {
-        board.printBatlefield();
+        board.printBattlefield();
     }
 }

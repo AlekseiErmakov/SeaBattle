@@ -21,7 +21,7 @@ public class GameBoard {
         service = new LocationServiceImpl();
     }
 
-    public StrikeResult getPlayerStrikeResult(String request, Player player) {
+    public StrikeResult getPlayerStrikeResult(String request, Player player) throws IncorrectShootRequestException {
         Field playerField = player.getField();
         if (request.length() == 2 || request.length() == 3) {
             System.out.println(request);
@@ -33,20 +33,24 @@ public class GameBoard {
         }
 
     }
+
     public StrikeResult getPlayerStrikeResult(int coord, Player player) {
         Field playerField = player.getField();
         System.out.println(service.translateRequest(coord));
         return playerField.getStrikeRes(coord);
     }
 
-    public void printBatlefield() {
+    public String printBattlefield() {
 
         List<String> pOneField = playerOne.getField().getFieldArray();
         List<String> pTwoField = playerTwo.getField().getFieldArray();
-        System.out.println(playerOne.getName() + "                            " + playerTwo.getName());
-        for (int i = 0; i < pOneField.size(); i++){
-            System.out.println(pOneField.get(i) + "          " + pTwoField.get(i));
+        StringBuilder builder = new StringBuilder();
+        builder.append(String.format("%s%29s\n",playerOne.getName(), playerTwo.getName()));
+
+        for (int i = 0; i < pOneField.size(); i++) {
+            builder.append(String.format("%s%25s\n",pOneField.get(i),pTwoField.get(i)));
         }
+        return builder.toString();
     }
 
 }

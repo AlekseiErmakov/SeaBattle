@@ -2,8 +2,7 @@ package homeworks.seabatle.players;
 
 
 import homeworks.seabatle.board.field.StrikeResult;
-import homeworks.seabatle.servises.coordinates.ShipAreaCreator;
-import lombok.Data;
+import homeworks.seabatle.servises.coordinates.ShipAreaCreatorImpl;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,9 +13,9 @@ import java.util.List;
 import java.util.Random;
 
 
-public class Computer extends Player  {
+public class Computer extends Player {
     @Getter
-    private String name = "Skynet";
+    private String name = "Computer";
     private List<Integer> targets;
     private List<Integer> targetArea;
     @Getter
@@ -25,18 +24,19 @@ public class Computer extends Player  {
     private boolean isWounded = false;
     @Setter
     private int currentTarget;
-    private ShipAreaCreator creator;
+    private ShipAreaCreatorImpl creator;
     private Random r;
-    public Computer(){
+
+    public Computer() {
         r = new Random();
         targets = getTargets();
         ship = new ArrayList<>();
-        creator = new ShipAreaCreator();
+        creator = new ShipAreaCreatorImpl();
 
     }
 
-    public void notifyShootResult(StrikeResult result){
-        switch (result){
+    public void notifyShootResult(StrikeResult result) {
+        switch (result) {
             case KILL:
                 isWounded = false;
                 updateTargets();
@@ -45,7 +45,6 @@ public class Computer extends Player  {
             case WOUND:
                 isWounded = true;
                 updateTargets(currentTarget);
-                System.out.println(currentTarget);
                 targetArea = makeArea(currentTarget);
                 addToShip();
                 break;
@@ -54,56 +53,63 @@ public class Computer extends Player  {
                 break;
         }
     }
-    public Integer shoot(){
+
+    public Integer shoot() {
         int coordinate;
-        if (isWounded){
+        if (isWounded) {
             coordinate = getTargetedInt();
         } else {
             coordinate = getRandomInt();
         }
-        if (targets.contains(coordinate)){
+        if (targets.contains(coordinate)) {
             setCurrentTarget(coordinate);
             return coordinate;
-        }else {
+        } else {
             return shoot();
         }
     }
-    private int getRandomInt(){
+
+    private int getRandomInt() {
 
         int index = r.nextInt(targets.size());
         return targets.get(index);
     }
-    private int getTargetedInt(){
-        if (ship.size() == 1){
+
+    private int getTargetedInt() {
+        if (ship.size() == 1) {
             return makeAreaShoot();
         } else {
             return makeLineShoot();
         }
     }
-    private int makeAreaShoot(){
+
+    private int makeAreaShoot() {
         int index = r.nextInt(targetArea.size());
         int target = targetArea.get(index);
         targetArea.remove(index);
         return target;
     }
-    private int makeLineShoot(){
+
+    private int makeLineShoot() {
         Collections.sort(ship);
         int step = ship.get(1) - ship.get(0);
         int choose = r.nextInt(2);
-        if (choose == 0){
+        if (choose == 0) {
             return ship.get(0) - step;
-        }else {
-            return ship.get(ship.size()-1) + step;
+        } else {
+            return ship.get(ship.size() - 1) + step;
         }
     }
 
-    private List<Integer> makeArea(int target){
+    private List<Integer> makeArea(int target) {
         return creator.getCrossArea(target);
     }
-    private void updateTargets(Integer target){
+
+    private void updateTargets(Integer target) {
         targets.remove(target);
     }
-    private void updateTargets(){
+
+    private void updateTargets() {
         List<Integer> tempCoordinates = new ArrayList<>();
         for (int coord : ship) {
             tempCoordinates.addAll(creator.getCrossArea(coord));
@@ -111,22 +117,26 @@ public class Computer extends Player  {
         }
         updateTargets(tempCoordinates);
     }
-    private void updateTargets(List<Integer> tempCoords){
-        for (Integer coord : tempCoords){
-            if (targets.contains(coord)){
+
+    private void updateTargets(List<Integer> tempCoords) {
+        for (Integer coord : tempCoords) {
+            if (targets.contains(coord)) {
                 targets.remove(coord);
             }
         }
     }
-    private void addToShip(){
+
+    private void addToShip() {
         ship.add(currentTarget);
     }
-    private void clearShip(){
+
+    private void clearShip() {
         ship.clear();
     }
-    private List<Integer> getTargets(){
+
+    private List<Integer> getTargets() {
         List<Integer> targets = new ArrayList<>();
-        for (int i = 0; i < 100; i++){
+        for (int i = 0; i < 100; i++) {
             targets.add(i);
         }
         return targets;
