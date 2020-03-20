@@ -1,10 +1,17 @@
 package homeworks.seabatle.model.board;
 
 
+<<<<<<< HEAD:src/main/java/homeworks/seabatle/model/board/Field.java
 import homeworks.seabatle.functional.StringMaker;
 import homeworks.seabatle.model.ship.Ship;
 import homeworks.seabatle.myenum.StrikeResult;
 import homeworks.seabatle.servises.locationservice.ShipAreaCreatorImpl;
+=======
+import homeworks.seabatle.board.field.repository.ShipsRepository;
+import homeworks.seabatle.functional.StringMaker;
+import homeworks.seabatle.servises.coordinates.ShipAreaCreatorImpl;
+import homeworks.seabatle.ship.Ship;
+>>>>>>> 196c9c899e8cc36f8da0cb21bf63ded50215e9d6:src/main/java/homeworks/seabatle/board/field/Field.java
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -177,7 +184,11 @@ public class Field {
     private void afterKillUpdate(int[] coords) {
         List<Integer> area = new ArrayList<>();
         ShipAreaCreatorImpl creator = new ShipAreaCreatorImpl();
+<<<<<<< HEAD:src/main/java/homeworks/seabatle/model/board/Field.java
         for (int coord : coords) {
+=======
+        for (int coord : coords){
+>>>>>>> 196c9c899e8cc36f8da0cb21bf63ded50215e9d6:src/main/java/homeworks/seabatle/board/field/Field.java
             area.addAll(creator.getCrossArea(coord));
             area.addAll(creator.getDiagonalArea(coord));
         }

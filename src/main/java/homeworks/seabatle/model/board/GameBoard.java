@@ -20,12 +20,15 @@ public class GameBoard {
         service = new LocationServiceImpl();
     }
 
+<<<<<<< HEAD:src/main/java/homeworks/seabatle/model/board/GameBoard.java
     /**
      * @param request user request with coordinate
      * @param player  player, which field was hit
      * @return enum , contains the information about strike result
      * @throws IncorrectShootRequestException if request is not valid
      */
+=======
+>>>>>>> 196c9c899e8cc36f8da0cb21bf63ded50215e9d6:src/main/java/homeworks/seabatle/board/GameBoard.java
     public StrikeResult getPlayerStrikeResult(String request, Player player) throws IncorrectShootRequestException {
         Field playerField = player.getField();
         if (request.length() == 2 || request.length() == 3) {
@@ -39,17 +42,21 @@ public class GameBoard {
 
     }
 
+<<<<<<< HEAD:src/main/java/homeworks/seabatle/model/board/GameBoard.java
     /**
      * @param coord  integer from 0 to 99
      * @param player player, which field was hit
      * @return enum , contains the information about strike result
      */
+=======
+>>>>>>> 196c9c899e8cc36f8da0cb21bf63ded50215e9d6:src/main/java/homeworks/seabatle/board/GameBoard.java
     public StrikeResult getPlayerStrikeResult(int coord, Player player) {
         Field playerField = player.getField();
         System.out.println(service.translateRequest(coord));
         return playerField.getStrikeRes(coord);
     }
 
+<<<<<<< HEAD:src/main/java/homeworks/seabatle/model/board/GameBoard.java
     /**
      * @return visualization of the battlefield condition
      */
@@ -61,6 +68,17 @@ public class GameBoard {
 
         for (int i = 0; i < pOneField.size(); i++) {
             builder.append(String.format("%s%25s\n", pOneField.get(i), pTwoField.get(i)));
+=======
+    public String printBattlefield() {
+
+        List<String> pOneField = playerOne.getField().getFieldArray();
+        List<String> pTwoField = playerTwo.getField().getFieldArray();
+        StringBuilder builder = new StringBuilder();
+        builder.append(String.format("%s%29s\n",playerOne.getName(), playerTwo.getName()));
+
+        for (int i = 0; i < pOneField.size(); i++) {
+            builder.append(String.format("%s%25s\n",pOneField.get(i),pTwoField.get(i)));
+>>>>>>> 196c9c899e8cc36f8da0cb21bf63ded50215e9d6:src/main/java/homeworks/seabatle/board/GameBoard.java
         }
         return builder.toString();
     }
