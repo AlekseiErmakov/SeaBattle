@@ -1,15 +1,9 @@
 package homeworks.seabatle.model.board;
 
 
-<<<<<<< HEAD:src/test/java/homeworks/seabatle/model/board/FieldTest.java
 import homeworks.seabatle.model.ship.Ship;
 import homeworks.seabatle.myenum.StrikeResult;
 import homeworks.seabatle.servises.factories.ShipAutoGenerator;
-=======
-import homeworks.seabatle.board.field.repository.ShipsRepository;
-import homeworks.seabatle.servises.generator.ShipAutoGenerator;
-import homeworks.seabatle.ship.Ship;
->>>>>>> 196c9c899e8cc36f8da0cb21bf63ded50215e9d6:src/test/java/homeworks/seabatle/board/field/FieldTest.java
 import org.junit.Before;
 import org.junit.Test;
 
@@ -28,11 +22,6 @@ public class FieldTest {
     public void setUp() throws Exception {
         repository = new ShipAutoGenerator().getGeneratedRepository();
         field = new Field(repository);
-<<<<<<< HEAD:src/test/java/homeworks/seabatle/model/board/FieldTest.java
-=======
-
-
->>>>>>> 196c9c899e8cc36f8da0cb21bf63ded50215e9d6:src/test/java/homeworks/seabatle/board/field/FieldTest.java
     }
 
     @Test

@@ -1,10 +1,5 @@
 package homeworks.seabatle.aplication;
 
-<<<<<<< HEAD
-=======
-import lombok.SneakyThrows;
-
->>>>>>> 196c9c899e8cc36f8da0cb21bf63ded50215e9d6
 public class StartingLogo implements Runnable{
     String COMPANY = "Epam Education Java Core";
     String UPDATINGDRIVERS = "Updating Drivers";
